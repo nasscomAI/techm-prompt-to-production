@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,"Other classification based on 'Tarmac, surface, melting'.",NEEDS_REVIEW
+AM-202402,Other,Standard,"Other classification based on 'Metal, shelter, reaching'.",NEEDS_REVIEW
+AM-202405,Other,Standard,"Other classification based on 'Dead, trees, with'.",NEEDS_REVIEW
+AM-202406,Other,Standard,"Other classification based on 'Irrigation, system, broken.'.",NEEDS_REVIEW
+AM-202407,Other,Urgent,"Other classification based on 'Broken, bench, upturned'.",NEEDS_REVIEW
+AM-202410,Pothole,Standard,"Pothole classification based on 'Pothole, main, highway'.",
+AM-202414,Other,Standard,"Other classification based on 'Residential, colony, unlit'.",NEEDS_REVIEW
+AM-202417,Waste,Standard,"Waste classification based on 'Night, market, waste'.",NEEDS_REVIEW
+AM-202421,Other,Standard,"Other classification based on 'Club, music, audible'.",NEEDS_REVIEW
+AM-202424,Other,Standard,"Other classification based on 'approach, road, surface'.",NEEDS_REVIEW
+AM-202429,Heat Hazard,Standard,"Heat Hazard classification based on 'River, walk, surface'.",
+AM-202431,Heritage Damage,Standard,"Heritage Damage classification based on 'city, road, subsidence'.",
+AM-202435,Heat Hazard,Standard,"Heat Hazard classification based on 'Black, metal, road'.",
+AM-202444,Waste,Standard,"Waste classification based on 'Restaurant, waste, bins'.",
+AM-202445,Other,Standard,"Other classification based on 'shelter, roof, glass'.",NEEDS_REVIEW
