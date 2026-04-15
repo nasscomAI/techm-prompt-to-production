@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Heat Hazard,Standard,"Description contains 'melting at' indicating Heat Hazard",
+AM-202402,Heat Hazard,Standard,"Description contains 'dangerous temperature' indicating Heat Hazard",
+AM-202405,Other,Standard,No category-specific keywords matched in description — defaulting to Other,NEEDS_REVIEW
+AM-202406,Heat Hazard,Standard,"Description contains 'heatwave' indicating Heat Hazard",
+AM-202407,Road Damage,Urgent,"Description contains 'upturned paving' indicating Road Damage; severity keyword(s) 'child' require Urgent priority",
+AM-202410,Pothole,Standard,"Description contains 'pothole' indicating Pothole",
+AM-202414,Streetlight,Standard,"Description contains 'unlit' indicating Streetlight",
+AM-202417,Heritage Damage,Standard,"Description contains 'heritage' indicating Heritage Damage; NOTE: Heritage area with waste issue — could be Heritage Damage or Waste",NEEDS_REVIEW
+AM-202421,Noise,Low,"Description contains 'music audible' indicating Noise",
+AM-202424,Road Damage,Standard,"Description contains 'road surface' indicating Road Damage",
+AM-202429,Heat Hazard,Standard,"Description contains 'temperature reads' indicating Heat Hazard",
+AM-202431,Heritage Damage,Standard,"Description contains 'heritage concern' indicating Heritage Damage",
+AM-202435,Heat Hazard,Standard,"Description contains 'storing heat' indicating Heat Hazard",
+AM-202444,Waste,Standard,"Description contains 'bins overflow' indicating Waste",
+AM-202445,Heat Hazard,Standard,"Description contains 'full sun' indicating Heat Hazard",
