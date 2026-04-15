@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,Classified as Pothole because description mentions 'pothole'.,
+PM-202402,Pothole,Urgent,Classified as Pothole because description mentions 'pothole'. Priority is Urgent due to 'child'.,
+PM-202406,Flooding,Standard,Classified as Flooding because description mentions 'water/flood'.,
+PM-202408,Flooding,Standard,"Ambiguous complaint mentioning multiple issues: water/flood, drain.",NEEDS_REVIEW
+PM-202410,Streetlight,Standard,Classified as Streetlight because description mentions 'light/power'.,
+PM-202411,Streetlight,Urgent,Classified as Streetlight because description mentions 'light/power'. Priority is Urgent due to 'hazard'.,
+PM-202413,Waste,Standard,Classified as Waste because description mentions 'waste'.,
+PM-202418,Other,Standard,Could not determine category from description.,
+PM-202419,Other,Standard,Could not determine category from description.,
+PM-202420,Other,Urgent,Could not determine category from description. Priority is Urgent due to 'injury'.,
+PM-202427,Flooding,Standard,Classified as Flooding because description mentions 'water/flood'.,
+PM-202428,Other,Standard,Could not determine category from description.,
+PM-202430,Heritage Damage,Standard,Classified as Heritage Damage because description mentions 'heritage/historic'.,
+PM-202433,Waste,Standard,Classified as Waste because description mentions 'waste'.,
+PM-202446,Other,Urgent,Could not determine category from description. Priority is Urgent due to 'fell'.,

@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,Could not determine category from description.,
+AM-202402,Other,Standard,Could not determine category from description.,
+AM-202405,Other,Standard,Could not determine category from description.,
+AM-202406,Other,Standard,Could not determine category from description.,
+AM-202407,Other,Urgent,Could not determine category from description. Priority is Urgent due to 'child'.,
+AM-202410,Pothole,Standard,Classified as Pothole because description mentions 'pothole'.,
+AM-202414,Other,Standard,Could not determine category from description.,
+AM-202417,Waste,Standard,"Ambiguous complaint mentioning multiple issues: waste, heritage/historic.",NEEDS_REVIEW
+AM-202421,Other,Standard,Could not determine category from description.,
+AM-202424,Other,Standard,Could not determine category from description.,
+AM-202429,Other,Standard,Could not determine category from description.,
+AM-202431,Heritage Damage,Standard,Classified as Heritage Damage because description mentions 'heritage/historic'.,
+AM-202435,Heat Hazard,Standard,Classified as Heat Hazard because description mentions 'heat'.,
+AM-202444,Waste,Standard,Classified as Waste because description mentions 'waste'.,
+AM-202445,Other,Standard,Could not determine category from description.,

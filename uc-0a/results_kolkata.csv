@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Streetlight,Standard,"Ambiguous complaint mentioning multiple issues: light/power, heritage/historic.",NEEDS_REVIEW
+KM-202402,Road Damage,Standard,"Ambiguous complaint mentioning multiple issues: road damage, heritage/historic.",NEEDS_REVIEW
+KM-202405,Noise,Standard,Classified as Noise because description mentions 'noise/sound'.,
+KM-202409,Pothole,Standard,Classified as Pothole because description mentions 'pothole'.,
+KM-202410,Pothole,Standard,Classified as Pothole because description mentions 'pothole'.,
+KM-202411,Pothole,Standard,"Ambiguous complaint mentioning multiple issues: pothole, water/flood.",NEEDS_REVIEW
+KM-202415,Drain Blockage,Standard,Classified as Drain Blockage because description mentions 'drain'.,
+KM-202418,Waste,Standard,Classified as Waste because description mentions 'waste'.,
+KM-202421,Road Damage,Urgent,Classified as Road Damage because description mentions 'road damage'. Priority is Urgent due to 'hospital'.,
+KM-202422,Road Damage,Standard,Classified as Road Damage because description mentions 'road damage'.,
+KM-202426,Heritage Damage,Standard,Classified as Heritage Damage because description mentions 'heritage/historic'.,
+KM-202430,Road Damage,Standard,Classified as Road Damage because description mentions 'road damage'.,
+KM-202434,Road Damage,Standard,"Ambiguous complaint mentioning multiple issues: road damage, heritage/historic.",NEEDS_REVIEW
+KM-202436,Streetlight,Standard,Classified as Streetlight because description mentions 'light/power'.,
+KM-202438,Noise,Standard,"Ambiguous complaint mentioning multiple issues: noise/sound, heritage/historic.",NEEDS_REVIEW
