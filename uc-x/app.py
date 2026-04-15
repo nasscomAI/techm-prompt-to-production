@@ -8,9 +8,13 @@ import argparse
 # Add parent directory to path to import llm_adapter
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import importlib.util
-spec = importlib.util.spec_from_file_location("llm_adapter", os.path.join(os.path.dirname(__file__), '..', 'uc-mcp', 'llm_adapter.py'))
-llm_adapter = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(llm_adapter)
+try:
+    spec = importlib.util.spec_from_file_location("llm_adapter", os.path.join(os.path.dirname(__file__), '..', 'uc-mcp', 'llm_adapter.py'))
+    llm_adapter = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(llm_adapter)
+except Exception as e:
+    print(f"Failed to load llm_adapter: {e}")
+    sys.exit(1)
 
 REFUSAL_TEMPLATE = """This question is not covered in the available policy documents
 (policy_hr_leave.txt, policy_it_acceptable_use.txt, policy_finance_reimbursement.txt).
@@ -41,19 +45,21 @@ def retrieve_documents() -> str:
 def answer_question(context: str, question: str) -> str:
     """Pass the loaded document context and user question to the LLM."""
     
-    prompt = f"""You are an exact and strictly factual corporate policy assistant.
+    prompt = f"""role: You are an exact and strictly factual corporate policy assistant.
 
-Your goal is to answer questions using ONLY the provided policy documents, citing the exact source document and section number for every claim, without blending distinct rules.
+intent: Your goal is to answer questions using only the provided policy documents, citing the exact source document and section number for every claim, without blending distinct rules.
+
+context: You only have access to three specific policy documents: HR Leave, IT Acceptable Use, and Finance Reimbursement. Do not use outside knowledge. Do not infer or guess.
+
+enforcement:
+- Never combine claims from two different documents into a single answer.
+- Never use hedging phrases like 'while not explicitly covered', 'typically', 'generally understood', or 'it is common practice'.
+- If the question is not covered in the documents, you MUST reply exactly with this refusal template and nothing else:
+{REFUSAL_TEMPLATE}
+- Cite the source document name and section number for every factual claim.
 
 CONTEXT (Available Policy Documents):
 {context}
-
-ENFORCEMENT RULES:
-1. Never combine claims from two different documents into a single answer. If a question touches on two separate documents in a contradictory or ambiguous way, refuse to answer using the refusal template.
-2. Never use hedging phrases: "while not explicitly covered", "typically", "generally understood", "it is common practice".
-3. Cite the source document name and section number for every factual claim.
-4. If the question is not covered in the documents, you MUST reply exactly with this refusal template and nothing else:
-{REFUSAL_TEMPLATE}
 
 QUESTION:
 {question}
@@ -61,7 +67,10 @@ QUESTION:
 ANSWER:
 """
     
-    response = llm_adapter.call_llm(prompt)
+    try:
+        response = llm_adapter.call_llm(prompt)
+    except Exception:
+        return REFUSAL_TEMPLATE
     
     if "[LLM NOT CONFIGURED]" in response:
         # Mock logic for tests if no API key is available

@@ -1,5 +1,7 @@
 """
 UC-0B app.py — Policy Summarizer
+Build this using the RICE + agents.md + skills.md + CRAFT workflow.
+See README.md for run command and expected behaviour.
 """
 import argparse
 import sys
@@ -9,33 +11,44 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 import importlib.util
-spec = importlib.util.spec_from_file_location("llm_adapter", os.path.join(os.path.dirname(__file__), '..', 'uc-mcp', 'llm_adapter.py'))
-llm_adapter = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(llm_adapter)
+try:
+    spec = importlib.util.spec_from_file_location("llm_adapter", os.path.join(os.path.dirname(__file__), '..', 'uc-mcp', 'llm_adapter.py'))
+    llm_adapter = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(llm_adapter)
+except Exception as e:
+    print(f"Failed to load llm_adapter: {e}")
+    sys.exit(1)
+
 
 def retrieve_policy(input_path: str) -> str:
-    """Load a .txt policy file and return its content."""
+    """
+    Skill: retrieve_policy
+    Description: Load a .txt policy file and return its content as structured numbered sections.
+    """
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
             return f.read()
     except Exception as e:
         return f"[ERROR] Could not read file {input_path}: {e}"
 
+
 def summarize_policy(policy_text: str) -> str:
-    """Pass the policy content to the LLM with strict RICE enforcement rules."""
+    """
+    Skill: summarize_policy
+    Description: Pass the structured policy content to an LLM with strict RICE enforcement rules to produce a compliant summary with clause references.
+    """
     
-    prompt = f"""You are an exact and strictly factual legal policy summarizer.
+    prompt = f"""role: You are an exact and strictly factual legal policy summarizer.
 
-Your goal is to extract and summarize every numbered clause of the provided policy document without losing any specific conditions, obligations, or scope.
+intent: Your goal is to extract and summarize every numbered clause of the provided policy document without losing any specific conditions, obligations, or scope, returning a compliant summary with clause references.
 
-CONTEXT:
-You must only use the provided text of the policy document. Do not add outside knowledge, standard practices, or assumptions.
+context: You must only use the provided text of the policy document. Do not add outside knowledge, standard practices, or assumptions.
 
-ENFORCEMENT RULES:
-1. Every numbered clause from the source text must be present in the summary.
-2. Multi-condition obligations must preserve ALL conditions exactly — never drop one silently (e.g. if two approvers are needed, list both).
-3. Never add information, phrases, or context not present in the source document.
-4. If a clause cannot be summarized without meaning loss, quote it verbatim and flag it with [VERBATIM].
+enforcement:
+- Every numbered clause must be present in the summary
+- Multi-condition obligations must preserve ALL conditions — never drop one silently
+- Never add information not present in the source document
+- If a clause cannot be summarised without meaning loss — quote it verbatim and flag it
 
 POLICY DOCUMENT:
 {policy_text}
@@ -44,7 +57,10 @@ OUTPUT FORMAT:
 Provide the summary with the clause numbers clearly referenced.
 """
     
-    response = llm_adapter.call_llm(prompt)
+    try:
+        response = llm_adapter.call_llm(prompt)
+    except Exception as e:
+        return f"[ERROR] LLM call failed: {e}"
     
     # Mocking for local testing if API key is not configured
     if "[LLM NOT CONFIGURED]" in response:
@@ -67,7 +83,7 @@ Provide the summary with the clause numbers clearly referenced.
 4.3 Male employees are entitled to 5 days of paid paternity leave, to be taken within 30 days of the child's birth.
 4.4 Paternity leave cannot be split across multiple periods.
 5.1 Employees may apply for Leave Without Pay (LWP) only after exhausting all applicable paid leave entitlements.
-5.2 LWP requires approval from the Department Head and the HR Director. Manager approval alone is not sufficient.
+5.2 [VERBATIM] "LWP requires approval from the Department Head and the HR Director. Manager approval alone is not sufficient."
 5.3 LWP exceeding 30 continuous days requires approval from the Municipal Commissioner.
 5.4 Periods of LWP do not count toward service for seniority, increments, or retirement benefits.
 6.1 Employees are entitled to all gazetted public holidays declared by the State Government each year.
@@ -80,6 +96,7 @@ Provide the summary with the clause numbers clearly referenced.
 8.2 Grievances raised after 10 working days will not be considered unless exceptional circumstances are demonstrated in writing."""
 
     return response
+
 
 def main():
     parser = argparse.ArgumentParser(description="UC-0B Policy Summarizer")

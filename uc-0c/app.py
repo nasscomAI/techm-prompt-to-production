@@ -20,7 +20,6 @@ def load_dataset(input_path: str, target_ward: str, target_category: str) -> lis
         with open(input_path, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                # Count nulls across the whole dataset as required by the spec to "report null count"
                 if not row['actual_spend'].strip():
                     null_count += 1
                     null_details.append(f"{row['period']} · {row['ward']} · {row['category']} (Reason: {row['notes']})")
@@ -101,13 +100,11 @@ def compute_growth(data: list, growth_type: str) -> list:
             
         prev_spend = float(prev_spend_str)
         
-        # Calculate MoM
         if prev_spend == 0:
             growth_pct = 0.0
         else:
             growth_pct = ((current_spend - prev_spend) / prev_spend) * 100
             
-        # Format the growth to include + or - and %
         sign = "+" if growth_pct > 0 else ""
         growth_str = f"{sign}{growth_pct:.1f}%"
         
