@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,"Description contains 'pothole' indicating Pothole",
+PM-202402,Pothole,Urgent,"Description contains 'pothole' indicating Pothole; severity keyword(s) 'child, school' require Urgent priority",
+PM-202406,Flooding,Standard,"Description contains 'flood, knee-deep' indicating Flooding",
+PM-202408,Drain Blockage,Standard,"Description contains 'drain block' indicating Drain Blockage; NOTE: Could be Flooding or Drain Blockage — root cause unclear",NEEDS_REVIEW
+PM-202410,Streetlight,Standard,"Description contains 'streetlight, dark at night' indicating Streetlight",
+PM-202411,Streetlight,Urgent,"Description contains 'streetlight, sparking' indicating Streetlight; severity keyword(s) 'hazard' require Urgent priority",
+PM-202413,Waste,Standard,"Description contains 'garbage' indicating Waste",
+PM-202418,Noise,Low,"Description contains 'playing music, music past' indicating Noise",
+PM-202419,Road Damage,Standard,"Description contains 'road surface, cracked, sinking' indicating Road Damage",
+PM-202420,Road Damage,Urgent,"Description contains 'manhole' indicating Road Damage; severity keyword(s) 'injury' require Urgent priority",
+PM-202427,Flooding,Standard,"Description contains 'flood' indicating Flooding",
+PM-202428,Waste,Standard,"Description contains 'dead animal' indicating Waste",
+PM-202430,Heritage Damage,Standard,"Description contains 'heritage' indicating Heritage Damage; NOTE: Heritage site with lighting issue — primary concern ambiguous",NEEDS_REVIEW
+PM-202433,Waste,Standard,"Description contains 'bulk waste' indicating Waste",
+PM-202446,Road Damage,Urgent,"Description contains 'footpath tiles, tiles broken, tiles upturned' indicating Road Damage; severity keyword(s) 'fell' require Urgent priority",

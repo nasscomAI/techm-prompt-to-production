@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Heritage Damage,Standard,"Description contains 'heritage lamp' indicating Heritage Damage",
+KM-202402,Heritage Damage,Standard,"Description contains 'historic tram' indicating Heritage Damage",
+KM-202405,Noise,Low,"Description contains 'band playing' indicating Noise",
+KM-202409,Pothole,Standard,"Description contains 'pothole' indicating Pothole",
+KM-202410,Pothole,Standard,"Description contains 'pothole' indicating Pothole",
+KM-202411,Pothole,Standard,"Description contains 'pothole' indicating Pothole",
+KM-202415,Other,Standard,No category-specific keywords matched in description — defaulting to Other,NEEDS_REVIEW
+KM-202418,Waste,Standard,"Description contains 'waste overflow' indicating Waste",
+KM-202421,Road Damage,Urgent,"Description contains 'sinking' indicating Road Damage; severity keyword(s) 'fell, hospital' require Urgent priority",
+KM-202422,Road Damage,Standard,"Description contains 'road surface, road buckled' indicating Road Damage",
+KM-202426,Heritage Damage,Standard,"Description contains 'heritage residential' indicating Heritage Damage",
+KM-202430,Road Damage,Standard,"Description contains 'road subsid' indicating Road Damage",
+KM-202434,Heritage Damage,Standard,"Description contains 'heritage stone' indicating Heritage Damage",
+KM-202436,Streetlight,Standard,"Description contains 'substation tripped, darkness for' indicating Streetlight",
+KM-202438,Heritage Damage,Standard,"Description contains 'heritage precinct' indicating Heritage Damage; NOTE: Heritage area with noise issue — could be Heritage Damage or Noise",NEEDS_REVIEW
