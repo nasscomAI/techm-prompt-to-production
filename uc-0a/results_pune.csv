@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,Classified as Pothole because of keywords related to 'pothole'. ,
+PM-202402,Pothole,Urgent,Classified as Pothole because of keywords related to 'pothole'. ,
+PM-202406,Flooding,Standard,Classified as Flooding because of keywords related to 'flooding'. ,
+PM-202408,Flooding,Standard,Classified as Flooding because of keywords related to 'flooding'. ,
+PM-202410,Streetlight,Standard,Classified as Streetlight because of keywords related to 'streetlight'. ,
+PM-202411,Streetlight,Urgent,Classified as Streetlight because of keywords related to 'streetlight'. ,
+PM-202413,Waste,Standard,Classified as Waste because of keywords related to 'waste'. ,
+PM-202418,Other,Standard,Could not identify a specific category from the description.,NEEDS_REVIEW
+PM-202419,Road Damage,Standard,Classified as Road Damage because of keywords related to 'road damage'. ,
+PM-202420,Other,Urgent,Could not identify a specific category from the description.,NEEDS_REVIEW
+PM-202427,Flooding,Standard,Classified as Flooding because of keywords related to 'flooding'. ,
+PM-202428,Other,Standard,Could not identify a specific category from the description.,NEEDS_REVIEW
+PM-202430,Streetlight,Standard,Classified as Streetlight because of keywords related to 'streetlight'. ,
+PM-202433,Road Damage,Standard,Classified as Road Damage because of keywords related to 'road damage'. ,
+PM-202446,Other,Urgent,Could not identify a specific category from the description.,NEEDS_REVIEW
