@@ -1,16 +1,14 @@
-# skills.md
-# INSTRUCTIONS: Generate a draft by prompting AI, then manually refine this file.
-# Delete these comments before committing.
+# skills.md — UC-0C Financial Growth Calculator
 
 skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: load_dataset
+    description: Read the CSV dataset, filter by ward and category, and report nulls.
+    input: String path to the dataset, String ward, String category.
+    output: List of dictionary records filtered for the specific ward and category.
+    error_handling: Return an error if the dataset is missing or malformed. Refuse if 'Any' ward or category is passed without explicit multi-ward aggregation permission.
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: compute_growth
+    description: Calculate MoM or YoY growth for the filtered dataset, ensuring nulls are flagged and formulas are shown.
+    input: List of dictionary records, String growth_type (MoM or YoY).
+    output: List of dictionary records containing period, actual_spend, growth percentage, and formula/flags.
+    error_handling: Return an error if growth_type is missing or invalid.
