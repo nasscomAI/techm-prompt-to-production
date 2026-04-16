@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,"Keywords found: Large, pothole, 60cm, wide, causing",
+PM-202402,Pothole,Urgent,"Keywords found: Deep, pothole, near, bus, stop.",
+PM-202406,Flooding,Standard,"Keywords found: Underpass, flooded, knee-deep, after, 2hrs",
+PM-202408,Flooding,Standard,"Keywords found: Bus, stand, flooded., Passengers, standing",
+PM-202410,Streetlight,Standard,"Keywords found: Three, consecutive, streetlights, out, for",
+PM-202411,Streetlight,Urgent,"Keywords found: Streetlight, flickering, and, sparking., Electrical",
+PM-202413,Waste,Standard,"Keywords found: Overflowing, garbage, bins, near, vegetable",
+PM-202418,Other,Standard,"Keywords found: Wedding, venue, playing, music, past",NEEDS_REVIEW
+PM-202419,Road Damage,Standard,"Keywords found: Road, surface, cracked, and, sinking",
+PM-202420,Pothole,Urgent,"Keywords found: Manhole, cover, missing., Risk, of",
+PM-202427,Flooding,Standard,"Keywords found: Bridge, approach, floods, in, 30mins",
+PM-202428,Other,Standard,"Keywords found: Dead, animal, not, removed, for",NEEDS_REVIEW
+PM-202430,Streetlight,Standard,"Keywords found: Heritage, street,, lights, out., Safety",
+PM-202433,Waste,Standard,"Keywords found: Bulk, waste, from, apartment, renovation",
+PM-202446,Other,Urgent,"Keywords found: Footpath, tiles, broken, and, upturned.",NEEDS_REVIEW
