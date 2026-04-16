@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,"Keywords found: Tarmac, surface, melting, at, 44°C.",NEEDS_REVIEW
+AM-202402,Heat Hazard,Standard,"Keywords found: Metal, bus, shelter, reaching, dangerous",
+AM-202405,Other,Standard,"Keywords found: Dead, trees, with, split, branches.",NEEDS_REVIEW
+AM-202406,Heat Hazard,Standard,"Keywords found: Irrigation, system, broken., Grass, dying",
+AM-202407,Other,Urgent,"Keywords found: Broken, bench, and, upturned, paving.",NEEDS_REVIEW
+AM-202410,Pothole,Standard,"Keywords found: Pothole, on, main, highway, causing",
+AM-202414,Other,Standard,"Keywords found: Residential, colony, unlit, after, 9pm.",NEEDS_REVIEW
+AM-202417,Waste,Standard,"Keywords found: Night, market, waste, not, cleared",
+AM-202421,Other,Standard,"Keywords found: Club, music, audible, at, residential",NEEDS_REVIEW
+AM-202424,Road Damage,Standard,"Keywords found: Zoo, approach, road, surface, bubbling",
+AM-202429,Heat Hazard,Standard,"Keywords found: River, walk, surface, temperature, unbearable.",
+AM-202431,Road Damage,Standard,"Keywords found: Old, city, road, subsidence, near",
+AM-202435,Road Damage,Standard,"Keywords found: Black, metal, road, dividers, storing",
+AM-202444,Waste,Standard,"Keywords found: Restaurant, waste, bins, overflowing, on",
+AM-202445,Other,Standard,"Keywords found: BRT, shelter, roof, glass, broken.",NEEDS_REVIEW

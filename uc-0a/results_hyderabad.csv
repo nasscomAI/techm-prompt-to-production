@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"Keywords found: Underpass, flooded, after, 1hr, rain.",
+GH-202402,Flooding,Standard,"Keywords found: Market, area, flooded., Traders, suffering",
+GH-202406,Flooding,Standard,"Keywords found: Main, stormwater, drain, 100%, blocked",
+GH-202407,Drain Blockage,Standard,"Keywords found: Drain, blocked, and, mosquito, breeding.",
+GH-202410,Pothole,Standard,"Keywords found: Potholes, causing, vehicles, to, slow",
+GH-202411,Pothole,Urgent,"Keywords found: Pothole, swallowed, entire, motorcycle, wheel.",
+GH-202412,Pothole,Urgent,"Keywords found: School, bus, struggling, to, navigate",
+GH-202417,Waste,Standard,"Keywords found: Heritage, zone, garbage, overflow., Tourist",
+GH-202420,Other,Standard,"Keywords found: Construction, drilling, from, 5am, daily",NEEDS_REVIEW
+GH-202422,Road Damage,Urgent,"Keywords found: Road, collapsed, partially., Crater, 1m",
+GH-202424,Flooding,Standard,"Keywords found: Underpass, floods, in, light, rain.",
+GH-202428,Waste,Standard,"Keywords found: Post-market, waste, not, cleared., Area",
+GH-202432,Other,Standard,"Keywords found: 24hr, supermarket, delivery, trucks, idling",NEEDS_REVIEW
+GH-202448,Flooding,Standard,"Keywords found: Main, drain, blocked, —, entire",
+GH-202438,Flooding,Standard,"Keywords found: Colony, surrounded, by, fields, that",

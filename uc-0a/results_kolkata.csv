@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Heritage Damage,Standard,"Keywords found: Heritage, lamp, post, knocked, over",
+KM-202402,Road Damage,Standard,"Keywords found: Historic, tram, road, cobblestones, broken",
+KM-202405,Other,Standard,"Keywords found: Wedding, band, playing, near, Tagore",NEEDS_REVIEW
+KM-202409,Pothole,Standard,"Keywords found: Airport, access, road, full, of",
+KM-202410,Pothole,Standard,"Keywords found: Pothole, causing, tyre, blowouts., Three",
+KM-202411,Pothole,Standard,"Keywords found: Deep, pothole, filling, with, rainwater.",
+KM-202415,Road Damage,Standard,"Keywords found: New, residential, complex, draining, directly",
+KM-202418,Waste,Standard,"Keywords found: Tourist, zone, waste, overflowing., Foreign",
+KM-202421,Other,Urgent,"Keywords found: Footpath, broken, and, sinking., Elderly",NEEDS_REVIEW
+KM-202422,Road Damage,Standard,"Keywords found: Road, surface, buckled, near, bridge.",
+KM-202426,Heritage Damage,Standard,"Keywords found: Heritage, residential, building, exterior, defaced",
+KM-202430,Road Damage,Standard,"Keywords found: Road, subsided, near, gas, pipeline.",
+KM-202434,Heritage Damage,Standard,"Keywords found: Street, paving, removed, for, utility",
+KM-202436,Other,Standard,"Keywords found: Entire, colony, substation, tripped., Darkness",NEEDS_REVIEW
+KM-202438,Heritage Damage,Standard,"Keywords found: Street, vendors, using, amplifiers, illegally",
