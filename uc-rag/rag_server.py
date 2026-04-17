@@ -18,6 +18,7 @@ Stack:
 import argparse
 import os
 import sys
+from nltk.tokenize import sent_tokenize
 
 # --- SKILL: chunk_documents ---
 def chunk_documents(docs_dir: str, max_tokens: int = 400) -> list[dict]:
@@ -30,11 +31,47 @@ def chunk_documents(docs_dir: str, max_tokens: int = 400) -> list[dict]:
     - Never split mid-sentence (chunk boundary failure)
     - Never exceed max_tokens per chunk
     """
-    raise NotImplementedError(
-        "Implement chunk_documents using your AI tool.\n"
-        "Hint: use nltk.sent_tokenize or split on '. ' and accumulate "
-        "sentences until token limit is reached."
-    )
+    import os
+    from transformers import GPT2TokenizerFast
+
+    tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
+    chunks = []
+
+    for file_name in os.listdir(docs_dir):
+        if file_name.endswith(".txt"):
+            file_path = os.path.join(docs_dir, file_name)
+            with open(file_path, "r", encoding="utf-8") as file:
+                text = file.read()
+                sentences = sent_tokenize(text)
+
+                current_chunk = []
+                current_tokens = 0
+                chunk_index = 0
+
+                for sentence in sentences:
+                    sentence_tokens = len(tokenizer.tokenize(sentence))
+
+                    if current_tokens + sentence_tokens > max_tokens:
+                        chunks.append({
+                            "doc_name": file_name,
+                            "chunk_index": chunk_index,
+                            "text": " ".join(current_chunk),
+                        })
+                        chunk_index += 1
+                        current_chunk = []
+                        current_tokens = 0
+
+                    current_chunk.append(sentence)
+                    current_tokens += sentence_tokens
+
+                if current_chunk:
+                    chunks.append({
+                        "doc_name": file_name,
+                        "chunk_index": chunk_index,
+                        "text": " ".join(current_chunk),
+                    })
+
+    return chunks
 
 
 # --- SKILL: retrieve_and_answer ---
@@ -48,21 +85,41 @@ def retrieve_and_answer(
 ) -> dict:
     """
     Embed query, retrieve top_k chunks from ChromaDB.
-    Filter chunks below threshold.
-    If no chunks pass threshold, return refusal template.
-    Otherwise call llm with retrieved chunks as context only.
-    Return: {answer, cited_chunks: [{doc_name, chunk_index, score}]}
-
-    Failure modes to prevent:
-    - Answer outside retrieved context
-    - Cross-document blending
-    - No citation
+    Generate an answer using only retrieved chunks.
+    Cite source document name and chunk index in the response.
+    Refuse to answer if no chunk scores above the threshold.
     """
-    raise NotImplementedError(
-        "Implement retrieve_and_answer using your AI tool.\n"
-        "Hint: embed query, query ChromaDB collection, check distances, "
-        "build prompt with retrieved chunks only, call llm_call(prompt)."
-    )
+    # Embed the query
+    query_embedding = embedder.encode(query)
+
+    # Retrieve top_k chunks
+    results = collection.query(query_embeddings=[query_embedding], n_results=top_k)
+
+    # Filter chunks by similarity threshold
+    retrieved_chunks = []
+    for doc, score in zip(results["documents"], results["distances"]):
+        if score >= threshold:
+            retrieved_chunks.append(doc)
+
+    # Refuse to answer if no chunks meet the threshold
+    if not retrieved_chunks:
+        return {
+            "answer": "I'm sorry, I cannot answer that question based on the available documents.",
+            "sources": []
+        }
+
+    # Generate the answer using retrieved chunks
+    context = "\n".join([chunk["text"] for chunk in retrieved_chunks])
+    prompt = f"Answer the question based on the following context:\n{context}\n\nQuestion: {query}\nAnswer:"
+    answer = llm_call(prompt)
+
+    # Cite sources
+    sources = [f"{chunk['doc_name']} (chunk {chunk['chunk_index']})" for chunk in retrieved_chunks]
+
+    return {
+        "answer": answer,
+        "sources": sources
+    }
 
 
 # --- INDEX BUILDER ---

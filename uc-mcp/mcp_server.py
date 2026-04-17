@@ -44,13 +44,9 @@ from llm_adapter import call_llm
 TOOL_DEFINITION = {
     "name": "query_policy_documents",
     "description": (
-        # FILL IN: Describe exactly what this tool covers and what it does not.
-        # Bad:  "Answers questions about policies"
-        # Good: "Answers questions about CMC HR Leave Policy, IT Acceptable Use
-        #        Policy, and Finance Reimbursement Policy only. Returns cited
-        #        answers grounded in retrieved document chunks. Returns a refusal
-        #        for questions outside these three documents."
-        "[FILL IN: specific scope + what it refuses]"
+        "Answers questions about CMC HR Leave Policy, IT Acceptable Use Policy, and Finance Reimbursement Policy only. "
+        "Returns cited answers grounded in retrieved document chunks. "
+        "Returns a refusal message for questions outside these three documents."
     ),
     "inputSchema": {
         "type": "object",
@@ -75,11 +71,52 @@ def query_policy_documents(question: str) -> dict:
     - If RAG refuses (no chunks above threshold) → isError: True
     - If RAG raises exception → isError: True with error message
     """
-    raise NotImplementedError(
-        "Implement query_policy_documents using your AI tool.\n"
-        "Hint: call rag_query(question, llm_call=call_llm), "
-        "check result['refused'], format as MCP content response."
-    )
+    try:
+        # Call RAG server with LLM adapter
+        result = rag_query(question, llm_call=call_llm)
+        
+        # Check if RAG refused
+        if result.get("refused", False):
+            return {
+                "content": [
+                    {
+                        "type": "text",
+                        "text": result.get("answer", "This question is outside the scope of CMC policies.")
+                    }
+                ],
+                "isError": True
+            }
+        
+        # Success case
+        answer = result.get("answer", "")
+        cited_chunks = result.get("cited_chunks", [])
+        
+        # Format as MCP content
+        content_text = answer
+        if cited_chunks:
+            sources = [f"{c['doc_name']}::chunk_{c['chunk_index']}" for c in cited_chunks]
+            content_text += f"\n\nSources: {', '.join(sources)}"
+        
+        return {
+            "content": [
+                {
+                    "type": "text",
+                    "text": content_text
+                }
+            ],
+            "isError": False
+        }
+    
+    except Exception as e:
+        return {
+            "content": [
+                {
+                    "type": "text",
+                    "text": f"Error processing question: {str(e)}"
+                }
+            ],
+            "isError": True
+        }
 
 
 # ── SKILL: serve_mcp ─────────────────────────────────────────────────────────
@@ -88,19 +125,86 @@ class MCPHandler(BaseHTTPRequestHandler):
     HTTP request handler implementing JSON-RPC 2.0.
     Handles POST requests to / with JSON-RPC body.
 
-    Implement:
+    Implements:
     - tools/list  → return TOOL_DEFINITION
     - tools/call  → call query_policy_documents, return result
     - unknown methods → JSON-RPC error -32601
     """
 
     def do_POST(self):
-        raise NotImplementedError(
-            "Implement do_POST using your AI tool.\n"
-            "Hint: read Content-Length, parse JSON body, "
-            "dispatch on method, write JSON-RPC response.\n"
-            "Return HTTP 200 for all JSON-RPC responses including errors."
-        )
+        """Handle JSON-RPC 2.0 POST requests."""
+        try:
+            # Read request body
+            content_length = int(self.headers.get('Content-Length', 0))
+            if content_length == 0:
+                self.send_error_response(None, -32700, "Parse error")
+                return
+            
+            body = self.rfile.read(content_length)
+            
+            try:
+                request = json.loads(body.decode('utf-8'))
+            except json.JSONDecodeError:
+                self.send_error_response(None, -32700, "Parse error")
+                return
+            
+            # Extract JSON-RPC fields
+            jsonrpc = request.get("jsonrpc", "2.0")
+            method = request.get("method")
+            params = request.get("params", {})
+            request_id = request.get("id")
+            
+            # Dispatch on method
+            if method == "tools/list":
+                response = {
+                    "jsonrpc": "2.0",
+                    "id": request_id,
+                    "result": {
+                        "tools": [TOOL_DEFINITION]
+                    }
+                }
+                self.send_json_response(response)
+            
+            elif method == "tools/call":
+                tool_name = params.get("name")
+                arguments = params.get("arguments", {})
+                
+                if tool_name == "query_policy_documents":
+                    question = arguments.get("question", "")
+                    result = query_policy_documents(question)
+                    response = {
+                        "jsonrpc": "2.0",
+                        "id": request_id,
+                        "result": result
+                    }
+                    self.send_json_response(response)
+                else:
+                    self.send_error_response(request_id, -32601, "Method not found")
+            
+            else:
+                self.send_error_response(request_id, -32601, "Method not found")
+        
+        except Exception as e:
+            self.send_error_response(None, -32603, f"Internal error: {str(e)}")
+    
+    def send_json_response(self, response: dict):
+        """Send a JSON response with HTTP 200."""
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(response).encode('utf-8'))
+    
+    def send_error_response(self, request_id, error_code: int, error_message: str):
+        """Send a JSON-RPC error response with HTTP 200."""
+        response = {
+            "jsonrpc": "2.0",
+            "id": request_id,
+            "error": {
+                "code": error_code,
+                "message": error_message
+            }
+        }
+        self.send_json_response(response)
 
     def log_message(self, format, *args):
         # Suppress default HTTP logging — use print for clarity
