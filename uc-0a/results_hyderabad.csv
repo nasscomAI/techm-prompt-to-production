@@ -1,0 +1,16 @@
+id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,Classified as Flooding; severity keyword 'ambulance' triggers Urgent priority.,
+GH-202402,Flooding,Standard,"Complaint could be Flooding, Drain Blockage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202406,Flooding,Standard,"Complaint could be Flooding, Drain Blockage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202407,Noise,Standard,"Complaint could be Noise, Drain Blockage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202410,Pothole,Standard,"Complaint could be Pothole, Road Damage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202411,Pothole,Urgent,Classified as Pothole; severity keyword 'hospital' triggers Urgent priority.,
+GH-202412,Pothole,Urgent,Classified as Pothole; severity keyword 'school' triggers Urgent priority.,
+GH-202417,Flooding,Standard,"Complaint could be Flooding, Waste, Heat Hazard, Heritage Damage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202420,Other,Standard,No specific complaint indicators found; defaulting to Other.,NEEDS_REVIEW
+GH-202422,Pothole,Urgent,"Complaint could be Pothole, Road Damage; severity keyword 'collapse' requires review.",NEEDS_REVIEW
+GH-202424,Flooding,Standard,"Complaint could be Flooding, Streetlight; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202428,Waste,Standard,Classified as Waste based on complaint mentions of waste.,
+GH-202432,Other,Standard,No specific complaint indicators found; defaulting to Other.,NEEDS_REVIEW
+GH-202448,Flooding,Standard,"Complaint could be Flooding, Noise, Drain Blockage; ambiguous categorization requires human review.",NEEDS_REVIEW
+GH-202438,Pothole,Standard,"Complaint could be Pothole, Flooding, Road Damage; ambiguous categorization requires human review.",NEEDS_REVIEW

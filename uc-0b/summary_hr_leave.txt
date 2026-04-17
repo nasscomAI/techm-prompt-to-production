@@ -1,0 +1,204 @@
+POLICY SUMMARY — COMPLIANCE FORMAT
+============================================================
+
+[Clause 1.1]
+  Binding Verb: unknown
+  Conditions: This policy governs all leave entitlements for permanent, contractual employees of the City Municipal Corporation (CMC)
+  [Clause 1.1] UNKNOWN This policy governs all leave entitlements for permanent AND contractual employees of the City Municipal Corporation (CMC). (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 1.2]
+  Binding Verb: unknown
+  [Clause 1.2] UNKNOWN: This policy does not apply to daily wage workers or consultants.
+    Those categories are governed by their respective contracts.
+
+═══════════════════════════════════════════════════════════
+2. ANNUAL...
+  #FLAG: Complex clause - consider verbatim quote for compliance audit
+
+[Clause 2.1]
+  Binding Verb: unknown
+  [Clause 2.1] UNKNOWN: Each permanent employee is entitled to 18 days of paid annual
+    leave per calendar year.
+
+[Clause 2.2]
+  Binding Verb: unknown
+  [Clause 2.2] UNKNOWN: Annual leave accrues at 1.5 days per month from the date of
+    joining.
+
+[Clause 2.3]
+  Binding Verb: must
+  [Clause 2.3] MUST: Employees must submit a leave application at least 14 calendar
+    days in advance using Form HR-L1.
+
+[Clause 2.4]
+  Binding Verb: must
+  [Clause 2.4] MUST: Leave applications must receive written approval from the
+    employee's direct manager before the leave commences.
+    Verbal approval is not valid.
+
+[Clause 2.5]
+  Binding Verb: will
+  [Clause 2.5] WILL: Unapproved absence will be recorded as Loss of Pay (LOP)
+    regardless of subsequent approval.
+
+[Clause 2.6]
+  Binding Verb: may
+  [Clause 2.6] MAY: Employees may carry forward a maximum of 5 unused annual leave
+    days to the following calendar year. Any days above 5 are
+    forfeited on 31 December.
+
+[Clause 2.7]
+  Binding Verb: are forfeited
+  [Clause 2.7] ARE FORFEITED: Carry-forward days must be used within the first quarter
+    (January–March) of the following year or they are forfeited.
+
+═══════════════════════════════════════════════════════════
+3. SICK LEAVE
+═══...
+  #FLAG: Complex clause - consider verbatim quote for compliance audit
+
+[Clause 3.1]
+  Binding Verb: unknown
+  [Clause 3.1] UNKNOWN: Each employee is entitled to 12 days of paid sick leave per
+    calendar year.
+
+[Clause 3.2]
+  Binding Verb: requires
+  [Clause 3.2] REQUIRES: Sick leave of 3 or more consecutive days requires a medical
+    certificate from a registered medical practitioner, submitted
+    within 48 hours of returning to work.
+
+[Clause 3.3]
+  Binding Verb: unknown
+  [Clause 3.3] UNKNOWN: Sick leave cannot be carried forward to the following year.
+
+[Clause 3.4]
+  Binding Verb: requires
+  Conditions: requires a medical certificate regardless
+    of duration, PATERNITY LEAVE
+═══════════════════════════════════════════════════════════
+  [Clause 3.4] REQUIRES requires a medical certificate regardless
+    of duration AND PATERNITY LEAVE
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 4.1]
+  Binding Verb: unknown
+  [Clause 4.1] UNKNOWN: Female employees are entitled to 26 weeks of paid maternity
+    leave for the first two live births.
+
+[Clause 4.2]
+  Binding Verb: unknown
+  [Clause 4.2] UNKNOWN: For a third or subsequent child, maternity leave is 12 weeks
+    paid.
+
+[Clause 4.3]
+  Binding Verb: unknown
+  [Clause 4.3] UNKNOWN: Male employees are entitled to 5 days of paid paternity leave,
+    to be taken within 30 days of the child's birth.
+
+[Clause 4.4]
+  Binding Verb: unknown
+  [Clause 4.4] UNKNOWN: Paternity leave cannot be split across multiple periods.
+
+═══════════════════════════════════════════════════════════
+5. LEAVE WITHOUT PAY (LWP)
+═══════════════════════════════════════════════════════...
+  #FLAG: Complex clause - consider verbatim quote for compliance audit
+
+[Clause 5.1]
+  Binding Verb: may
+  [Clause 5.1] MAY: An employee may apply for Leave Without Pay only after
+    exhausting all applicable paid leave entitlements.
+
+[Clause 5.2]
+  Binding Verb: requires
+  Conditions: approval from the Department Head, the
+    HR Director. Manager approval alone is not sufficient
+  [Clause 5.2] REQUIRES approval from the Department Head AND the
+    HR Director. Manager approval alone is not sufficient. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 5.3]
+  Binding Verb: requires
+  [Clause 5.3] REQUIRES: LWP exceeding 30 continuous days requires approval from
+    the Municipal Commissioner.
+
+[Clause 5.4]
+  Binding Verb: unknown
+  [Clause 5.4] UNKNOWN: Periods of LWP do not count toward service for the purposes
+    of seniority, increments, or retirement benefits.
+
+═══════════════════════════════════════════════════════════
+6. PUBLIC HOLIDAYS
+══════...
+  #FLAG: Complex clause - consider verbatim quote for compliance audit
+
+[Clause 6.1]
+  Binding Verb: unknown
+  [Clause 6.1] UNKNOWN: Employees are entitled to all gazetted public holidays as
+    declared by the State Government each year.
+
+[Clause 6.2]
+  Binding Verb: is required
+  [Clause 6.2] IS REQUIRED: If an employee is required to work on a public holiday, they
+    are entitled to one compensatory off day, to be taken within
+    60 days of the holiday worked.
+
+[Clause 6.3]
+  Binding Verb: unknown
+  [Clause 6.3] UNKNOWN: Compensatory off cannot be encashed.
+
+═══════════════════════════════════════════════════════════
+7. LEAVE ENCASHMENT
+═══════════════════════════════════════════════════════════
+
+[Clause 7.1]
+  Binding Verb: may
+  [Clause 7.1] MAY: Annual leave may be encashed only at the time of retirement
+    or resignation, subject to a maximum of 60 days.
+
+[Clause 7.2]
+  Binding Verb: not permitted
+  [Clause 7.2] NOT PERMITTED: Leave encashment during service is not permitted under any
+    circumstances.
+
+[Clause 7.3]
+  Binding Verb: unknown
+  Conditions: Sick leave, LWP cannot be encashed under any circumstances.
+
+═══════════════════════════════════════════════════════════
+8. GRIEVANCES
+═══════════════════════════════════════════════════════════
+  [Clause 7.3] UNKNOWN Sick leave AND LWP cannot be encashed under any circumstances.
+
+═══════════════════════════════════════════════════════════
+8. GRIEVANCES
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 8.1]
+  Binding Verb: must
+  [Clause 8.1] MUST: Leave-related grievances must be raised with the HR Department
+    within 10 working days of the disputed decision.
+
+[Clause 8.2]
+  Binding Verb: will
+  [Clause 8.2] WILL: Grievances raised after 10 working days will not be considered
+    unless exceptional circumstances are demonstrated in writing.
+
+============================================================
+COMPLIANCE AUDIT
+Total clauses processed: 29
+Compliance flags raised: 8
+
+Flags:
+  - Clause 1.1: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 1.2: Flagged as complex - may require verbatim
+  - Clause 2.7: Flagged as complex - may require verbatim
+  - Clause 3.4: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 4.4: Flagged as complex - may require verbatim
+  - Clause 5.2: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 5.4: Flagged as complex - may require verbatim
+  - Clause 7.3: Multi-condition clause (AND-joined) requires all conditions
