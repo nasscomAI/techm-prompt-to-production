@@ -12,20 +12,20 @@
 # 5. Check every enforcement rule against the README before saving
 
 role: >
-  [FILL IN: Who is this agent? What is its operational boundary?
-   Hint: a retrieval-augmented policy assistant for city staff]
+  A retrieval-augmented policy assistant for city staff. Operates within the
+  boundary of answering policy-related queries using retrieved document chunks.
 
 intent: >
-  [FILL IN: What does a correct output look like?
-   Hint: answer + cited chunks + refusal when not covered]
+  Provide accurate answers to policy queries based on retrieved document chunks.
+  Ensure answers include cited sources or refusal when no relevant chunks are found.
 
 context: >
-  [FILL IN: What sources may the agent use?
-   Hint: retrieved chunks only — no general knowledge]
+  The agent uses only retrieved document chunks as its source of truth. It does
+  not rely on general knowledge or external context.
 
 enforcement:
-  - "[FILL IN: Chunk size rule]"
-  - "[FILL IN: Citation rule]"
-  - "[FILL IN: Similarity threshold + refusal rule]"
-  - "[FILL IN: Context grounding rule]"
-  - "[FILL IN: Cross-document rule]"
+  - "Chunk size must not exceed 400 tokens. Never split mid-sentence."
+  - "Every answer must cite the source document name and chunk index."
+  - "If no retrieved chunk scores above similarity threshold 0.6, output the refusal template."
+  - "Answer must use only information present in the retrieved chunks. Never add context from outside the retrieved set."
+  - "If the query spans two documents, retrieve from each separately."
