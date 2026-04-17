@@ -1,0 +1,232 @@
+POLICY SUMMARY — COMPLIANCE FORMAT
+============================================================
+
+[Clause 1.1]
+  Binding Verb: unknown
+  Conditions: This policy governs acceptable use of all IT systems, devices,
+    networks, data owned or managed by the City Municipal
+    Corporation (CMC)
+  [Clause 1.1] UNKNOWN This policy governs acceptable use of all IT systems, devices,
+    networks AND data owned or managed by the City Municipal
+    Corporation (CMC). (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 1.2]
+  Binding Verb: unknown
+  Conditions: This policy applies to all permanent employees, contractual
+    staff, third-party vendors with CMC system access
+  [Clause 1.2] UNKNOWN This policy applies to all permanent employees, contractual
+    staff AND third-party vendors with CMC system access. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 1.3]
+  Binding Verb: unknown
+  [Clause 1.3] UNKNOWN: Use of CMC IT resources implies acceptance of this policy.
+
+═══════════════════════════════════════════════════════════
+2. CORPORATE DEVICES
+═══════════════════════════════════════════════════════════
+
+[Clause 2.1]
+  Binding Verb: must
+  [Clause 2.1] MUST: Corporate devices (laptops, desktops, mobile phones issued by
+    CMC) must be used primarily for official work purposes.
+
+[Clause 2.2]
+  Binding Verb: unknown
+  [Clause 2.2] UNKNOWN: Personal use of corporate devices is permitted in moderation,
+    provided it does not interfere with work duties or consume
+    excessive bandwidth.
+
+[Clause 2.3]
+  Binding Verb: must
+  [Clause 2.3] MUST: Employees must not install software on corporate devices
+    without written approval from the IT Department.
+
+[Clause 2.4]
+  Binding Verb: must
+  [Clause 2.4] MUST: Software approved for installation must be sourced from the
+    CMC-approved software catalogue only.
+
+[Clause 2.5]
+  Binding Verb: must
+  [Clause 2.5] MUST: Corporate devices must not be used to access gambling, adult
+    content, or any site classified as harmful by the IT Department.
+
+[Clause 2.6]
+  Binding Verb: must
+  Conditions: Corporate devices must have the CMC endpoint security agent
+    installed, active at all times. Disabling or circumventing
+    this agent is a disciplinary offence.
+
+═══════════════════════════════════════════════════════════
+3. PERSONAL DEVICES (BYOD)
+═══════════════════════════════════════════════════════════
+  [Clause 2.6] MUST Corporate devices must have the CMC endpoint security agent
+    installed AND active at all times. Disabling or circumventing
+    this agent is a disciplinary offence.
+
+═══════════════════════════════════════════════════════════
+3. PERSONAL DEVICES (BYOD)
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 3.1]
+  Binding Verb: may
+  Conditions: Personal devices may be used to access CMC email, the
+    CMC employee self-service portal only
+  [Clause 3.1] MAY Personal devices may be used to access CMC email AND the
+    CMC employee self-service portal only. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 3.2]
+  Binding Verb: must
+  [Clause 3.2] MUST: Personal devices must not be used to access, store, or
+    transmit classified or sensitive CMC data.
+
+[Clause 3.3]
+  Binding Verb: must
+  [Clause 3.3] MUST: Personal devices must not be connected to the CMC internal
+    network (wired or wireless). The CMC Guest WiFi network is
+    available for personal device internet access.
+
+[Clause 3.4]
+  Binding Verb: must
+  [Clause 3.4] MUST: Employees using personal devices for CMC email must enable
+    device-level PIN or biometric lock.
+
+[Clause 3.5]
+  Binding Verb: must
+  Conditions: If a personal device containing CMC email is lost or stolen,
+    the employee must report it to the IT helpdesk within 4 hours
+    so that a remote wipe of CMC data can be performed.
+
+═══════════════════════════════════════════════════════════
+4. PASSWORDS, ACCESS CONTROL
+═══════════════════════════════════════════════════════════
+  [Clause 3.5] MUST If a personal device containing CMC email is lost or stolen,
+    the employee must report it to the IT helpdesk within 4 hours
+    so that a remote wipe of CMC data can be performed.
+
+═══════════════════════════════════════════════════════════
+4. PASSWORDS AND ACCESS CONTROL
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 4.1]
+  Binding Verb: must
+  [Clause 4.1] MUST: Employees must not share their CMC system passwords with
+    any other person, including IT staff.
+
+[Clause 4.2]
+  Binding Verb: will
+  [Clause 4.2] WILL: IT staff will never ask for your password. Any request for
+    your password should be reported to the IT Security team.
+
+[Clause 4.3]
+  Binding Verb: must
+  [Clause 4.3] MUST: Passwords must be changed every 90 days as prompted by the
+    system.
+
+[Clause 4.4]
+  Binding Verb: unknown
+  [Clause 4.4] UNKNOWN: Multi-factor authentication (MFA) is mandatory for all remote
+    access to CMC systems.
+
+═══════════════════════════════════════════════════════════
+5. DATA HANDLING
+═════════════════════════════════...
+  #FLAG: Complex clause - consider verbatim quote for compliance audit
+
+[Clause 5.1]
+  Binding Verb: must
+  [Clause 5.1] MUST: CMC data classified as Confidential or Restricted must not
+    be stored on personal devices, personal cloud storage, or
+    any system not approved by the IT Department.
+
+[Clause 5.2]
+  Binding Verb: must
+  [Clause 5.2] MUST: Employees must not forward CMC email containing Confidential
+    data to personal email accounts.
+
+[Clause 5.3]
+  Binding Verb: must
+  Conditions: Printing of Confidential documents must use the secure print
+    function. Documents must not be left unattended at printers.
+
+═══════════════════════════════════════════════════════════
+6. INTERNET, EMAIL USE
+═══════════════════════════════════════════════════════════
+  [Clause 5.3] MUST Printing of Confidential documents must use the secure print
+    function. Documents must not be left unattended at printers.
+
+═══════════════════════════════════════════════════════════
+6. INTERNET AND EMAIL USE
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 6.1]
+  Binding Verb: unknown
+  Conditions: Internet use on CMC systems is monitored, logged
+  [Clause 6.1] UNKNOWN Internet use on CMC systems is monitored AND logged. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 6.2]
+  Binding Verb: must
+  [Clause 6.2] MUST: Employees must not use CMC email addresses to register for
+    personal services, social media, or non-work subscriptions.
+
+[Clause 6.3]
+  Binding Verb: must
+  Conditions: Mass emails to external recipients must be approved by the
+    Communications Department before sending.
+
+═══════════════════════════════════════════════════════════
+7. VIOLATIONS, CONSEQUENCES
+═══════════════════════════════════════════════════════════
+  [Clause 6.3] MUST Mass emails to external recipients must be approved by the
+    Communications Department before sending.
+
+═══════════════════════════════════════════════════════════
+7. VIOLATIONS AND CONSEQUENCES
+═══════════════════════════════════════════════════════════. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 7.1]
+  Binding Verb: may
+  Conditions: Violations of this policy may result in disciplinary action
+    up to, including termination of employment
+  [Clause 7.1] MAY Violations of this policy may result in disciplinary action
+    up to AND including termination of employment. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+[Clause 7.2]
+  Binding Verb: will
+  [Clause 7.2] WILL: Violations involving unauthorised access to restricted data
+    will be reported to law enforcement.
+
+[Clause 7.3]
+  Binding Verb: unknown
+  Conditions: CMC reserves the right to monitor, access, audit any
+    activity on CMC-owned systems at any time without prior notice
+  [Clause 7.3] UNKNOWN CMC reserves the right to monitor, access AND audit any
+    activity on CMC-owned systems at any time without prior notice. (All 2 conditions required.)
+  #FLAG: Multi-condition preservation - 2 conditions present
+
+============================================================
+COMPLIANCE AUDIT
+Total clauses processed: 27
+Compliance flags raised: 11
+
+Flags:
+  - Clause 1.1: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 1.2: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 2.6: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 3.1: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 3.5: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 4.4: Flagged as complex - may require verbatim
+  - Clause 5.3: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 6.1: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 6.3: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 7.1: Multi-condition clause (AND-joined) requires all conditions
+  - Clause 7.3: Multi-condition clause (AND-joined) requires all conditions
