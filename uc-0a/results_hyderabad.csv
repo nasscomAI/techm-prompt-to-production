@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Flooding,Urgent,The complaint mentions 'Underpass'.,
+Flooding,Standard,The complaint mentions 'Market'.,NEEDS_REVIEW
+Drain Blockage,Standard,The complaint mentions 'Main'.,
+Drain Blockage,Standard,The complaint mentions 'Drain'.,
+Pothole,Standard,The complaint mentions 'Potholes'.,
+Pothole,Urgent,The complaint mentions 'Pothole'.,
+Pothole,Urgent,The complaint mentions 'School'.,
+Waste,Standard,The complaint mentions 'Heritage'.,NEEDS_REVIEW
+Other,Standard,The complaint mentions 'Construction'.,
+Other,Urgent,The complaint mentions 'Road'.,
+Flooding,Standard,The complaint mentions 'Underpass'.,NEEDS_REVIEW
+Waste,Standard,The complaint mentions 'Post-market'.,
+Other,Standard,The complaint mentions '24hr'.,
+Flooding,Standard,The complaint mentions 'Main'.,NEEDS_REVIEW
+Other,Standard,The complaint mentions 'Colony'.,

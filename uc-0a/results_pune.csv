@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Pothole,Standard,The complaint mentions 'Large'.,
+Pothole,Urgent,The complaint mentions 'Deep'.,
+Flooding,Standard,The complaint mentions 'Underpass'.,
+Flooding,Standard,The complaint mentions 'Bus'.,NEEDS_REVIEW
+Streetlight,Standard,The complaint mentions 'Three'.,
+Streetlight,Urgent,The complaint mentions 'Streetlight'.,
+Waste,Standard,The complaint mentions 'Overflowing'.,
+Other,Standard,The complaint mentions 'Wedding'.,
+Other,Standard,The complaint mentions 'Road'.,
+Other,Urgent,The complaint mentions 'Manhole'.,
+Flooding,Standard,The complaint mentions 'Bridge'.,
+Other,Standard,The complaint mentions 'Dead'.,
+Streetlight,Standard,The complaint mentions 'Heritage'.,NEEDS_REVIEW
+Waste,Standard,The complaint mentions 'Bulk'.,
+Other,Urgent,The complaint mentions 'Footpath'.,

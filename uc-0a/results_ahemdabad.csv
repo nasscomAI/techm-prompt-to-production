@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Other,Standard,The complaint mentions 'Tarmac'.,
+Other,Standard,The complaint mentions 'Metal'.,
+Other,Standard,The complaint mentions 'Dead'.,
+Heat Hazard,Standard,The complaint mentions 'Irrigation'.,
+Other,Urgent,The complaint mentions 'Broken'.,
+Pothole,Standard,The complaint mentions 'Pothole'.,
+Other,Standard,The complaint mentions 'Residential'.,
+Waste,Standard,The complaint mentions 'Night'.,NEEDS_REVIEW
+Other,Standard,The complaint mentions 'Club'.,
+Other,Standard,The complaint mentions 'Zoo'.,
+Other,Standard,The complaint mentions 'River'.,
+Heritage Damage,Standard,The complaint mentions 'Old'.,
+Heat Hazard,Standard,The complaint mentions 'Black'.,
+Waste,Standard,The complaint mentions 'Restaurant'.,
+Other,Standard,The complaint mentions 'BRT'.,
