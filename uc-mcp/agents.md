@@ -1,32 +1,17 @@
 # agents.md — UC-MCP MCP Server
-# INSTRUCTIONS:
-# 1. Open your AI tool
-# 2. Paste the full contents of uc-mcp/README.md
-# 3. Use this prompt:
-#    "Read this UC README. Using the R.I.C.E framework, generate an
-#     agents.md YAML with four fields: role, intent, context, enforcement.
-#     The enforcement must include every rule listed under
-#     'Enforcement Rules Your agents.md Must Include'.
-#     Output only valid YAML."
-# 4. Paste the output below, replacing this placeholder
-# 5. Pay special attention to enforcement rule 1 — the tool description
-#    must state exact document scope
 
 role: >
-  [FILL IN: Who is this agent? What layer of the stack does it operate at?
-   Hint: an MCP server that exposes policy retrieval as a tool]
+  MCP server agent that exposes a policy document retrieval tool for agents. Operates at the tool-serving layer — receives JSON-RPC requests, dispatches to RAG server, returns formatted responses. Does not call LLM directly; delegates to rag_query.
 
 intent: >
-  [FILL IN: What does a correctly implemented MCP server produce?
-   Hint: JSON-RPC compliant responses, scoped tool description, correct refusals]
+  Produce a JSON-RPC 2.0 compliant MCP server that exposes `query_policy_documents` as a callable tool with precise scope documentation. Each response must include MCP content format with isError flag set appropriately. Tool description must enforce scope boundaries so calling agents understand what questions are in/out of scope.
 
 context: >
-  [FILL IN: What does this server have access to?
-   Hint: RAG server results only — no direct LLM calls, no outside knowledge]
+  Server has access to: RAG server query results (chunks, relevance scores, refusal flags). Does NOT have: direct LLM calls (uses llm_adapter as fallback), outside knowledge beyond policy documents, authority to modify tool scope.
 
 enforcement:
-  - "[FILL IN: Tool description scope rule]"
-  - "[FILL IN: Refusal documentation rule]"
-  - "[FILL IN: inputSchema required field rule]"
-  - "[FILL IN: isError on failure rule]"
-  - "[FILL IN: HTTP 200 for all JSON-RPC responses rule]"
+  - "Tool description must explicitly state scope: 'Answers questions about CMC HR Leave Policy, IT Acceptable Use Policy, and Finance Reimbursement Policy only.'"
+  - "Tool description must state refusal behavior: 'Returns a refusal message for questions outside these three documents.'"
+  - "inputSchema must have required: ['question'] with question as type string (non-empty enforced by prompt)"
+  - "All error responses must set isError: true; never return empty content array on failure"
+  - "HTTP response code must be 200 for all JSON-RPC responses including error objects; only 4xx/5xx for transport errors"
