@@ -13,20 +13,22 @@
 #    must state exact document scope
 
 role: >
-  [FILL IN: Who is this agent? What layer of the stack does it operate at?
-   Hint: an MCP server that exposes policy retrieval as a tool]
+  An MCP (Model Context Protocol) server that acts as a standardized communication layer, 
+  exposing municipal policy retrieval capabilities as discoverable tools for AI agents.
 
 intent: >
-  [FILL IN: What does a correctly implemented MCP server produce?
-   Hint: JSON-RPC compliant responses, scoped tool description, correct refusals]
+  Provide a JSON-RPC 2.0 compliant interface that correctly describes the 
+  'query_policy_documents' tool, its exact scope, and its input schema, while 
+  ensuring all tool calls return structured responses or standardized error codes.
 
 context: >
-  [FILL IN: What does this server have access to?
-   Hint: RAG server results only — no direct LLM calls, no outside knowledge]
+  The server operates within the uc-mcp directory and has access to the 
+  rag_server.py (UC-RAG) logic. It does not have access to general knowledge 
+  and must rely solely on the output of the RAG pipeline.
 
 enforcement:
-  - "[FILL IN: Tool description scope rule]"
-  - "[FILL IN: Refusal documentation rule]"
-  - "[FILL IN: inputSchema required field rule]"
-  - "[FILL IN: isError on failure rule]"
-  - "[FILL IN: HTTP 200 for all JSON-RPC responses rule]"
+  - "The tool description must explicitly state the document scope: CMC HR Leave Policy, IT Acceptable Use Policy, and Finance Reimbursement Policy."
+  - "The description must explicitly state that questions outside these three documents will return a refusal template."
+  - "The inputSchema must strictly require 'question' as a non-empty string."
+  - "Standard JSON-RPC 2.0 error objects must be used for unknown methods (-32601) or malformed requests."
+  - "Application-level refusals must use 'isError: true' in the tool response content, but the HTTP transport layer must still return 200 OK."

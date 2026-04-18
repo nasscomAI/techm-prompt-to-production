@@ -44,13 +44,10 @@ from llm_adapter import call_llm
 TOOL_DEFINITION = {
     "name": "query_policy_documents",
     "description": (
-        # FILL IN: Describe exactly what this tool covers and what it does not.
-        # Bad:  "Answers questions about policies"
-        # Good: "Answers questions about CMC HR Leave Policy, IT Acceptable Use
-        #        Policy, and Finance Reimbursement Policy only. Returns cited
-        #        answers grounded in retrieved document chunks. Returns a refusal
-        #        for questions outside these three documents."
-        "[FILL IN: specific scope + what it refuses]"
+        "Answers questions about CMC HR Leave Policy, IT Acceptable Use "
+        "Policy, and Finance Reimbursement Policy only. Returns cited "
+        "answers grounded in retrieved document chunks. Returns a "
+        "refusal template for questions outside these three documents."
     ),
     "inputSchema": {
         "type": "object",
@@ -75,11 +72,27 @@ def query_policy_documents(question: str) -> dict:
     - If RAG refuses (no chunks above threshold) → isError: True
     - If RAG raises exception → isError: True with error message
     """
-    raise NotImplementedError(
-        "Implement query_policy_documents using your AI tool.\n"
-        "Hint: call rag_query(question, llm_call=call_llm), "
-        "check result['refused'], format as MCP content response."
-    )
+    try:
+        if not question or not isinstance(question, str):
+            return {
+                "content": [{"type": "text", "text": "Error: Question must be a non-empty string."}],
+                "isError": True
+            }
+
+        result = rag_query(question, llm_call=call_llm)
+        
+        # Check if RAG refused to answer (threshold failure)
+        is_error = result.get("refused", False)
+        
+        return {
+            "content": [{"type": "text", "text": result["answer"]}],
+            "isError": is_error
+        }
+    except Exception as e:
+        return {
+            "content": [{"type": "text", "text": f"Internal Server Error: {str(e)}"}],
+            "isError": True
+        }
 
 
 # ── SKILL: serve_mcp ─────────────────────────────────────────────────────────
@@ -95,12 +108,64 @@ class MCPHandler(BaseHTTPRequestHandler):
     """
 
     def do_POST(self):
-        raise NotImplementedError(
-            "Implement do_POST using your AI tool.\n"
-            "Hint: read Content-Length, parse JSON body, "
-            "dispatch on method, write JSON-RPC response.\n"
-            "Return HTTP 200 for all JSON-RPC responses including errors."
-        )
+        content_length = int(self.headers.get('Content-Length', 0))
+        if content_length == 0:
+            self.send_error_response(-32700, "Parse error: Empty request body", None)
+            return
+
+        body = self.rfile.read(content_length).decode('utf-8')
+        try:
+            data = json.loads(body)
+        except json.JSONDecodeError:
+            self.send_error_response(-32700, "Parse error: Invalid JSON", None)
+            return
+
+        request_id = data.get("id")
+        method = data.get("method")
+        params = data.get("params", {})
+
+        if not method:
+            self.send_error_response(-32600, "Invalid Request: Missing method", request_id)
+            return
+
+        if method == "tools/list":
+            self.send_success_response({"tools": [TOOL_DEFINITION]}, request_id)
+        elif method == "tools/call":
+            tool_name = params.get("name")
+            args = params.get("arguments", {})
+            
+            if tool_name == "query_policy_documents":
+                result = query_policy_documents(args.get("question"))
+                self.send_success_response(result, request_id)
+            else:
+                self.send_error_response(-32601, f"Method not found: Tool '{tool_name}' unknown", request_id)
+        else:
+            self.send_error_response(-32601, f"Method not found: '{method}'", request_id)
+
+    def send_success_response(self, result, request_id):
+        response = {
+            "jsonrpc": "2.0",
+            "id": request_id,
+            "result": result
+        }
+        self._send_json(response)
+
+    def send_error_response(self, code, message, request_id):
+        response = {
+            "jsonrpc": "2.0",
+            "id": request_id,
+            "error": {
+                "code": code,
+                "message": message
+            }
+        }
+        self._send_json(response)
+
+    def _send_json(self, response_data):
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(response_data).encode('utf-8'))
 
     def log_message(self, format, *args):
         # Suppress default HTTP logging — use print for clarity
@@ -115,7 +180,7 @@ def main():
     args = parser.parse_args()
 
     # Verify RAG index exists
-    db_path = os.path.join(os.path.dirname(__file__), "../uc-rag/stub_chroma_db")
+    db_path = os.path.join(os.path.dirname(__file__), "../uc-rag/chroma_db")
     if not os.path.exists(db_path):
         print("[mcp_server] WARNING: RAG index not found.")
         print("[mcp_server] Run first: python3 ../uc-rag/stub_rag.py --build-index")
