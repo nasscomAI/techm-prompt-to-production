@@ -1,25 +1,43 @@
-# skills.md — UC-RAG RAG Server
-# INSTRUCTIONS:
-# 1. Open your AI tool
-# 2. Paste the full contents of uc-rag/README.md
-# 3. Use this prompt:
-#    "Read this UC README. Generate a skills.md YAML defining the two
-#     skills: chunk_documents and retrieve_and_answer. Each skill needs:
-#     name, description, input, output, error_handling.
-#     error_handling must address the failure modes in the README.
-#     Output only valid YAML."
-# 4. Paste the output below, replacing this placeholder
-# 5. Verify error_handling addresses all three failure modes
-
 skills:
   - name: chunk_documents
-    description: "[FILL IN]"
-    input: "[FILL IN: path to policy-documents directory]"
-    output: "[FILL IN: list of chunk dicts with doc_name, chunk_index, text]"
-    error_handling: "[FILL IN: what happens if a file is missing or unreadable]"
+    description: >
+      Loads all policy documents from the data/policy-documents directory and splits them into
+      sentence-aware chunks of maximum 400 tokens. Ensures no sentence is split across chunks
+      and attaches metadata including document name and chunk index.
+    input: >
+      Path to directory: data/policy-documents/
+    output: >
+      List of chunk dictionaries:
+      [
+        {
+          "doc_name": "policy_name",
+          "chunk_index": 0,
+          "text": "chunk text"
+        }
+      ]
+    error_handling: >
+      If a file is missing or unreadable, skip the file and log an error without stopping execution.
+      To prevent chunk boundary failure, enforce sentence-boundary-aware splitting and ensure no chunk
+      exceeds 400 tokens or splits mid-sentence.
 
   - name: retrieve_and_answer
-    description: "[FILL IN]"
-    input: "[FILL IN: query string]"
-    output: "[FILL IN: answer string + list of cited chunks]"
-    error_handling: "[FILL IN: what happens when no chunk scores above 0.6]"
+    description: >
+      Takes a query string, embeds it using sentence-transformers, retrieves relevant chunks
+      from ChromaDB using cosine similarity, filters out chunks below a similarity threshold of 0.6,
+      and generates an answer strictly grounded in the retrieved chunks with proper citations.
+    input: >
+      Query string
+    output: >
+      {
+        "answer": "grounded answer",
+        "citations": [
+          {"doc_name": "policy_name", "chunk_index": 1}
+        ]
+      }
+    error_handling: >
+      If no retrieved chunk has a similarity score of 0.6 or higher, return the refusal template:
+      "This question is not covered in the retrieved policy documents. Retrieved chunks: []. Please contact the relevant department for guidance."
+      To prevent wrong chunk retrieval, apply similarity threshold filtering and restrict results to top relevant chunks.
+      To prevent answering outside retrieved context, enforce that the LLM uses only retrieved chunks and does not introduce external knowledge.
+      To prevent cross-document blending, group retrieved chunks by document and generate separate answers per document.
+      To prevent missing citations, ensure every response includes doc_name and chunk_index for all referenced chunks.

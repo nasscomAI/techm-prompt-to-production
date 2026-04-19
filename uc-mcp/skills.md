@@ -1,24 +1,45 @@
-# skills.md — UC-MCP MCP Server
-# INSTRUCTIONS:
-# 1. Open your AI tool
-# 2. Paste the full contents of uc-mcp/README.md
-# 3. Use this prompt:
-#    "Read this UC README. Generate a skills.md YAML defining the two
-#     skills: query_policy_documents and serve_mcp. Each skill needs:
-#     name, description, input, output, error_handling.
-#     error_handling must address the failure mode in the README.
-#     Output only valid YAML."
-# 4. Paste the output below, replacing this placeholder
-
 skills:
   - name: query_policy_documents
-    description: "[FILL IN]"
-    input: "[FILL IN: question string]"
-    output: "[FILL IN: MCP content format — content array + isError]"
-    error_handling: "[FILL IN: what happens when RAG refuses or raises exception]"
+    description: >
+      Retrieves grounded answers strictly from CMC policy documents:
+      HR Leave Policy, IT Acceptable Use Policy, and Finance Reimbursement Policy.
+      This skill must only be used for questions within this defined scope and
+      returns answers with supporting citations via the RAG system.
+    input: >
+      question (string): A non-empty question strictly related to the allowed
+      CMC policy documents.
+    output: >
+      MCP-compliant response object containing:
+      - content: an array with at least one item of type "text" containing the answer and cited sources
+      - isError: boolean (false for valid answers, true for refusals or failures)
+    error_handling: >
+      If the RAG system returns refused = true (question is out of scope),
+      return a response with content containing the refusal message and
+      set isError: true. Never return an empty content array.
+      If an internal exception occurs, return a safe error message in content
+      with isError: true. The tool must not attempt to answer questions outside
+      the defined document scope, preventing misuse caused by vague tool descriptions.
 
   - name: serve_mcp
-    description: "[FILL IN]"
-    input: "[FILL IN: HTTP POST with JSON-RPC body]"
-    output: "[FILL IN: JSON-RPC 2.0 response, always HTTP 200]"
-    error_handling: "[FILL IN: unknown method → -32601, malformed request → -32700]"
+    description: >
+      Runs an MCP-compliant HTTP server that exposes tools via JSON-RPC 2.0.
+      Supports method discovery (tools/list) and tool invocation (tools/call),
+      enabling external agents to safely interact with the RAG-backed tool.
+    input: >
+      HTTP POST requests containing a JSON-RPC 2.0 body with fields:
+      - jsonrpc: "2.0"
+      - method: "tools/list" or "tools/call"
+      - id: request identifier
+      - params (for tools/call): tool name and arguments
+    output: >
+      JSON-RPC 2.0 response object with:
+      - jsonrpc: "2.0"
+      - id: matching request id
+      - result OR error
+      Always returned with HTTP 200 status for valid JSON-RPC handling.
+    error_handling: >
+      Unknown method must return JSON-RPC error with code -32601 (Method not found).
+      Malformed JSON or invalid request must return JSON-RPC error with code -32700 (Parse error).
+      Application-level failures must be returned in result with isError: true,
+      not via HTTP status codes. Ensures strict protocol compliance and prevents
+      ambiguity in agent-tool interactions.
