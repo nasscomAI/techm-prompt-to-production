@@ -160,15 +160,19 @@
 
 **Which CRAFT step was hardest across all UCs, and why?**
 
-> [Your answer — 2–3 sentences]
+> The hardest step was **Test** — specifically designing adversarial test cases that exposed failure modes the naive prompt hid rather than announced. In UC-X, the cross-document blend question looked correct on the surface (the answer was plausible and cited real policy language) but was factually wrong because it combined two documents into a permission that existed in neither. In UC-0C, the naive output also looked correct — a growth percentage is a growth percentage — until you checked whether it was scoped to a single ward, whether nulls were reported, and whether the formula was shown. The failure was invisible without a deliberate test designed to catch it.
 
 **What is the single most important thing you added manually to an agents.md that the AI did not generate on its own?**
 
-> [Your answer — be specific, quote the rule]
+> In `uc-x/agents.md`, the fifth enforcement rule — the blend condition — was the critical manual addition the AI did not produce unprompted:
+>
+> `"If answering the question requires combining information from two or more documents in a way that produces a claim not present in either document alone, treat it as out-of-scope and issue the refusal template."`
+>
+> The AI generated rules about citing sources and avoiding hedging, but it did not define the specific condition under which a multi-document match becomes a refusal rather than a combined answer. Without this rule, the system would have answered the personal-phone question by blending IT § 3.1 and HR remote work language — which is exactly the failure mode UC-X is designed to catch. The rule had to be written manually because it requires understanding what a blend *is*, not just that blending is bad.
 
 **Name one real task in your work where you will apply RICE + CRAFT within the next two weeks:**
 
-> [Your answer]
+> Automating the generation of release notes from Jira tickets and git commit messages. The naive prompt produces summaries that soften breaking changes ("updated" instead of "removed"), omit deprecation notices, and blend unrelated tickets into a single bullet. I will apply RICE to define the role (release notes writer scoped to a single sprint), intent (every breaking change flagged, every deprecation listed verbatim), context (only the provided Jira export and commit log — no inferred roadmap context), and enforcement rules that ban obligation softening and require ticket IDs cited on every line. CRAFT will drive the test loop: run the naive prompt first, identify which release notes are wrong or missing, then refine enforcement rules until the output matches the ground-truth release notes.
 
 ---
 
