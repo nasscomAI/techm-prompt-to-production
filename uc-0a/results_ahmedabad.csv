@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202402,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202405,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202406,Heat Hazard,Standard,The complaint is classified as Heat Hazard because it mentions 'heat'.,
+AM-202407,Other,Urgent,The complaint is marked Urgent because it contains the severity keyword 'child'.,NEEDS_REVIEW
+AM-202410,Pothole,Standard,The complaint is classified as Pothole because it mentions 'pothole'.,
+AM-202414,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202417,Other,Standard,"The description is ambiguous as it contains keywords for multiple categories: Waste, Heritage Damage.",NEEDS_REVIEW
+AM-202421,Noise,Standard,The complaint is classified as Noise because it mentions 'music'.,
+AM-202424,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202429,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
+AM-202431,Heritage Damage,Standard,The complaint is classified as Heritage Damage because it mentions 'heritage'.,
+AM-202435,Heat Hazard,Standard,The complaint is classified as Heat Hazard because it mentions 'heat'.,
+AM-202444,Waste,Standard,The complaint is classified as Waste because it mentions 'waste'.,
+AM-202445,Other,Standard,The complaint could not be clearly classified into a specific category.,NEEDS_REVIEW
