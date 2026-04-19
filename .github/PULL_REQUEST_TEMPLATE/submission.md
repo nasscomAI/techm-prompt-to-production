@@ -122,28 +122,37 @@
 **What did the naive prompt return for the cross-document test question?**
 *(Question: "Can I use my personal phone to access work files when working from home?")*
 
-> [Quote the actual output]
+> "Yes, you can use your personal phone to access approved remote work tools and CMC email when working from home, as long as you follow the IT acceptable use guidelines." — The naive prompt blended IT policy section 3.1 (email + self-service portal only) with HR policy language about approved remote work tools to produce a permission that does not exist in either document.
 
 **Did it blend the IT and HR policies?**
 
-> Yes / No — [explain]
+> Yes — it combined IT-POL-003 § 3.1 (personal devices limited to CMC email and employee self-service portal) with HR-POL-001 language about approved remote work tools, producing the false claim that personal phones can be used for "approved remote work tools." That combined claim appears in neither document. The IT policy explicitly limits personal device access to email and the portal only — nothing else.
 
 **After your fix — what does your system return for this question?**
 
-> [Quote the actual output]
+> `This question is not covered in the available policy documents (policy_hr_leave.txt, policy_it_acceptable_use.txt, policy_finance_reimbursement.txt). Please contact [relevant team] for guidance.`
+>
+> The system detected that competitive hits spanned both `policy_it_acceptable_use.txt` and `policy_hr_leave.txt`, flagged it as a cross-document blend risk, and issued the refusal template verbatim.
 
 **Did your system use any hedging phrases in any answer?**
 *("while not explicitly covered", "typically", "generally understood")*
 
-> Yes / No — [quote any you found]
+> No — the enforcement rules in `agents.md` explicitly ban all hedging phrases. The `answer_question` skill returns either a direct single-source answer with citation or the exact refusal template. No hedging phrases appeared in any of the 7 test question responses.
 
 **Did all 7 test questions produce either a single-source cited answer or the exact refusal template?**
 
-> Yes / No — [list any that failed]
+> Yes — all 7 passed:
+> 1. Carry forward annual leave → `policy_hr_leave.txt § 2.6` — max 5 days, forfeited 31 December
+> 2. Install Slack on work laptop → `policy_it_acceptable_use.txt § 2.1` — written IT approval required
+> 3. Home office equipment allowance → `policy_finance_reimbursement.txt § 3.1` — Rs 8,000 one-time, permanent WFH only
+> 4. Personal phone for work files from home → **Refusal** (cross-document blend detected)
+> 5. Company view on flexible working culture → **Refusal** (not in any document)
+> 6. DA and meal receipts same day → `policy_finance_reimbursement.txt § 2.6` — explicitly prohibited
+> 7. Who approves leave without pay → `policy_hr_leave.txt § 5.2` — Department Head AND HR Director, both required
 
 **Your git commit message for UC-X:**
 
-> [paste your commit message here]
+> `UC-X Fix cross-document blending + hedged hallucination: naive prompt had no source boundaries or refusal logic → defined agents.md with RICE enforcement rules, skills.md with single-source retrieval, and implemented app.py with section-indexed QA and verbatim refusal template`
 
 ---
 
