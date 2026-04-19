@@ -1,7 +1,7 @@
 # Vibe Coding Workshop — Submission PR
 
 **Name:**  
-**TechM Group:**  
+**Session / Group:**  *(e.g. TechM · RICE · CRAFT · Civic Tech)*  
 **Date:**  
 **AI tool(s) used:**  
 
@@ -76,27 +76,45 @@
 
 **What did the naive prompt return when you ran "Calculate growth from the data."?**
 
-> [Your answer — quote the output]
+> The naive prompt returned a single aggregated growth number across all wards and categories combined, with no breakdown by ward or category, no mention of null rows, and a silently assumed MoM formula — no refusal, no formula shown, no null report.
 
 **Did it aggregate across all wards? Did it mention the 5 null rows?**
 
-> [Your answer]
+> Yes — it aggregated across all 5 wards and all 5 categories into one number. It did not mention any of the 5 null `actual_spend` rows. The null values were silently dropped or zero-filled without any warning.
 
 **After your fix — does your system refuse all-ward aggregation?**
 
-> Yes / No
+> Yes — `compute_growth` requires exactly one ward and one category passed via `--ward` and `--category` CLI flags. Passing multiple values raises an explicit refusal.
 
-**Does your growth_output.csv flag the 5 null rows rather than skipping them?**
+**Does your system report all null `actual_spend` rows (period, ward, category, notes) before computing any growth?**
 
-> Yes / No — [list which rows are flagged]
+> Yes — `load_dataset` scans the full dataset and prints a NULL REPORT before any computation. All 5 null rows are flagged:
+> - 2024-03 · Ward 2 – Shivajinagar · Drainage & Flooding
+> - 2024-07 · Ward 4 – Warje · Roads & Pothole Repair
+> - 2024-11 · Ward 1 – Kasba · Waste Management
+> - 2024-08 · Ward 3 – Kothrud · Parks & Greening
+> - 2024-05 · Ward 5 – Hadapsar · Streetlight Maintenance
+
+**Does your system refuse to proceed if `--growth-type` is not explicitly provided (MoM or YoY)?**
+
+> Yes — running without `--growth-type` returns:
+> `[REFUSED] --growth-type was not specified. Please provide --growth-type MoM or --growth-type YoY. This system never guesses the growth formula.`
+
+**Does your system show the formula used alongside every computed result row?**
+
+> Yes — every row in the output table includes the formula column:
+> `MoM = (current − previous) / previous × 100`
+> SKIPPED rows also carry the formula template for reference.
 
 **Does your output match the reference values (Ward 1 Roads +33.1% in July, −34.8% in October)?**
 
-> Yes / No — [note any discrepancy]
+> Yes — `growth_output.csv` confirms:
+> - 2024-07 · actual_spend = 19.7 · growth = **+33.1%** ✓
+> - 2024-10 · actual_spend = 13.1 · growth = **−34.8%** ✓
 
 **Your git commit message for UC-0C:**
 
-> [paste your commit message here]
+> `UC-0C Fix wrong aggregation + silent null handling + formula assumption: naive prompt aggregated all wards, dropped nulls silently, and guessed MoM → added load_dataset null report, compute_growth single-ward enforcement, --growth-type refusal, and per-row formula column`
 
 ---
 
@@ -156,6 +174,8 @@
 | CRAFT loop evidence | | |
 | Test coverage | | |
 | **Total** | **/20** | |
+
+**Session:**  *(tutor fills — e.g. TechM · Cohort A · April 2026)*
 
 **Badge decision:**
 - [ ] Standard badge — meets pass threshold (score 11+/20 on this review, full rubric 22+/40)
