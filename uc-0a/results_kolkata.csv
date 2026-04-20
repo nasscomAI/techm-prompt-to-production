@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Streetlight,Standard,"Complaint mentions 'lamp', indicating Streetlight.",
+KM-202402,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+KM-202405,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+KM-202409,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+KM-202410,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+KM-202411,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+KM-202415,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+KM-202418,Flooding,Standard,"Complaint mentions 'overflow', indicating Flooding.",
+KM-202421,Road Damage,Urgent,"Complaint mentions 'broken', indicating Road Damage.",
+KM-202422,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+KM-202426,Heritage Damage,Standard,"Complaint mentions 'heritage', indicating Heritage Damage.",
+KM-202430,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+KM-202434,Heritage Damage,Standard,"Complaint mentions 'heritage', indicating Heritage Damage.",
+KM-202436,Streetlight,Standard,"Complaint mentions 'dark', indicating Streetlight.",
+KM-202438,Heritage Damage,Standard,"Complaint mentions 'heritage', indicating Heritage Damage.",

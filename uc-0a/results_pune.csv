@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+PM-202402,Pothole,Urgent,"Complaint mentions 'pothole', indicating Pothole.",
+PM-202406,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+PM-202408,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+PM-202410,Streetlight,Standard,"Complaint mentions 'streetlight', indicating Streetlight.",
+PM-202411,Streetlight,Urgent,"Complaint mentions 'streetlight', indicating Streetlight.",
+PM-202413,Flooding,Standard,"Complaint mentions 'overflow', indicating Flooding.",
+PM-202418,Noise,Standard,"Complaint mentions 'music', indicating Noise.",
+PM-202419,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+PM-202420,Pothole,Urgent,"Complaint mentions 'hole', indicating Pothole.",
+PM-202427,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+PM-202428,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+PM-202430,Streetlight,Standard,"Complaint mentions 'light', indicating Streetlight.",
+PM-202433,Waste,Standard,"Complaint mentions 'waste', indicating Waste.",
+PM-202446,Road Damage,Urgent,"Complaint mentions 'broken', indicating Road Damage.",

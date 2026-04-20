@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"Complaint mentions 'flood', indicating Flooding.",
+GH-202402,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+GH-202406,Flooding,Standard,"Complaint mentions 'water', indicating Flooding.",
+GH-202407,Drain Blockage,Standard,"Complaint mentions 'drain', indicating Drain Blockage.",
+GH-202410,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+GH-202411,Pothole,Urgent,"Complaint mentions 'pothole', indicating Pothole.",
+GH-202412,Pothole,Urgent,"Complaint mentions 'pothole', indicating Pothole.",
+GH-202417,Flooding,Standard,"Complaint mentions 'overflow', indicating Flooding.",
+GH-202420,Noise,Standard,"Complaint mentions 'construction', indicating Noise.",
+GH-202422,Pothole,Urgent,"Complaint mentions 'crater', indicating Pothole.",
+GH-202424,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+GH-202428,Waste,Standard,"Complaint mentions 'waste', indicating Waste.",
+GH-202432,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+GH-202448,Flooding,Standard,"Complaint mentions 'flood', indicating Flooding.",
+GH-202438,Flooding,Standard,"Complaint mentions 'water', indicating Flooding.",

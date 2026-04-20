@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+AM-202402,Heat Hazard,Standard,"Complaint mentions 'temperature', indicating Heat Hazard.",
+AM-202405,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+AM-202406,Road Damage,Standard,"Complaint mentions 'broken', indicating Road Damage.",
+AM-202407,Road Damage,Urgent,"Complaint mentions 'broken', indicating Road Damage.",
+AM-202410,Pothole,Standard,"Complaint mentions 'pothole', indicating Pothole.",
+AM-202414,Other,Standard,No clear category indicator found in description.,NEEDS_REVIEW
+AM-202417,Waste,Standard,"Complaint mentions 'waste', indicating Waste.",
+AM-202421,Noise,Standard,"Complaint mentions 'music', indicating Noise.",
+AM-202424,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+AM-202429,Heat Hazard,Standard,"Complaint mentions 'temperature', indicating Heat Hazard.",
+AM-202431,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+AM-202435,Road Damage,Standard,"Complaint mentions 'road', indicating Road Damage.",
+AM-202444,Flooding,Standard,"Complaint mentions 'overflow', indicating Flooding.",
+AM-202445,Road Damage,Standard,"Complaint mentions 'broken', indicating Road Damage.",
