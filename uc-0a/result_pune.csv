@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Other,Standard,"Classified as Other because description contains conflicting keywords 'damage', 'pothole', 'tyre' matching multiple categories.",NEEDS_REVIEW
+PM-202402,Pothole,Urgent,Classified as Pothole because description contains 'pothole'.,
+PM-202406,Flooding,Standard,"Classified as Flooding because description contains 'flood', 'rain'.",
+PM-202408,Other,Standard,"Classified as Other because description contains conflicting keywords 'drain', 'flood', 'rain', 'water' matching multiple categories.",NEEDS_REVIEW
+PM-202410,Streetlight,Standard,"Classified as Streetlight because description contains 'light', 'streetlight'.",
+PM-202411,Other,Urgent,"Classified as Other because description contains conflicting keywords 'hazard', 'light', 'streetlight' matching multiple categories.",NEEDS_REVIEW
+PM-202413,Waste,Standard,Classified as Waste because description contains 'overflowing'.,
+PM-202418,Noise,Standard,Classified as Noise because description contains 'playing'.,
+PM-202419,Road Damage,Standard,Classified as Road Damage because description contains 'road'.,
+PM-202420,Other,Urgent,Classified as Other because description does not contain keywords matching any specific category.,NEEDS_REVIEW
+PM-202427,Flooding,Standard,"Classified as Flooding because description contains 'flood', 'rain'.",
+PM-202428,Other,Standard,Classified as Other because description does not contain keywords matching any specific category.,NEEDS_REVIEW
+PM-202430,Other,Standard,"Classified as Other because description contains conflicting keywords 'heritage', 'light' matching multiple categories.",NEEDS_REVIEW
+PM-202433,Other,Standard,"Classified as Other because description contains conflicting keywords 'road', 'waste' matching multiple categories.",NEEDS_REVIEW
+PM-202446,Road Damage,Urgent,"Classified as Road Damage because description contains 'broken', 'footpath'.",

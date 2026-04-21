@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"Classified as Flooding because description contains 'flood', 'rain'.",
+GH-202402,Other,Standard,"Classified as Other because description contains conflicting keywords 'drain', 'flood', 'rain' matching multiple categories.",NEEDS_REVIEW
+GH-202406,Other,Standard,"Classified as Other because description contains conflicting keywords 'drain', 'rain', 'water' matching multiple categories.",NEEDS_REVIEW
+GH-202407,Other,Standard,"Classified as Other because description contains conflicting keywords 'drain', 'rain' matching multiple categories.",NEEDS_REVIEW
+GH-202410,Other,Standard,"Classified as Other because description contains conflicting keywords 'pothole', 'potholes', 'road' matching multiple categories.",NEEDS_REVIEW
+GH-202411,Pothole,Urgent,Classified as Pothole because description contains 'pothole'.,
+GH-202412,Pothole,Urgent,"Classified as Pothole because description contains 'pothole', 'potholes'.",
+GH-202417,Other,Standard,"Classified as Other because description contains conflicting keywords 'heritage', 'piles', 'waste' matching multiple categories.",NEEDS_REVIEW
+GH-202420,Other,Standard,Classified as Other because description does not contain keywords matching any specific category.,NEEDS_REVIEW
+GH-202422,Road Damage,Urgent,Classified as Road Damage because description contains 'road'.,
+GH-202424,Other,Standard,"Classified as Other because description contains conflicting keywords 'band', 'flood', 'light', 'rain' matching multiple categories.",NEEDS_REVIEW
+GH-202428,Waste,Standard,Classified as Waste because description contains 'waste'.,
+GH-202432,Other,Standard,Classified as Other because description does not contain keywords matching any specific category.,NEEDS_REVIEW
+GH-202448,Other,Standard,"Classified as Other because description contains conflicting keywords 'drain', 'flood', 'rain' matching multiple categories.",NEEDS_REVIEW
+GH-202438,Other,Standard,"Classified as Other because description contains conflicting keywords 'rain', 'road', 'water' matching multiple categories.",NEEDS_REVIEW
