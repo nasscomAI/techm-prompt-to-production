@@ -1,0 +1,12 @@
+# Employee Expense Reimbursement Policy Summary
+
+- **Clause 1.3:** Claims must be submitted within 30 calendar days of the expense; late claims will not be processed.
+- **Clause 2.2:** Outstation travel must be pre-approved via Form FIN-T1; unauthorized travel is non-reimbursable.
+- **Clause 2.3:** Air travel is limited to journeys over 500km; economy class is mandatory and business class is not reimbursable.
+- **Clause 2.6:** Daily Allowance (DA) and actual meal receipts cannot be claimed simultaneously for the same day.
+- **Clause 3.4:** WFH equipment claims must include original receipts and be submitted within 60 days of written Department Head approval.
+- **Clause 3.5:** Eligibility for WFH allowance is restricted to permanent arrangements; temporary or partial WFH is excluded.
+- **Clause 4.4:** Repayment of training costs is required upon leaving: 100% if within 12 months, 50% if between 12 and 24 months.
+- **Clause 5.3:** Monthly mobile and internet reimbursements require original bills; estimates or self-declarations are prohibited.
+- **Clause 6.2:** Original receipts are mandatory for all claims; photocopies are only permitted if no physical receipt was issued by the vendor.
+- **Clause 6.4:** Disputes regarding reimbursement decisions must be raised with the Finance Department within 10 working days.
