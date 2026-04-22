@@ -1,0 +1,12 @@
+# IT Acceptable Use Policy Summary
+
+- **Clause 2.3:** Software installation on corporate devices is prohibited without written approval from the IT Department.
+- **Clause 2.6:** Endpoint security agents must remain active at all times; disabling them is a disciplinary offence.
+- **Clause 3.2:** Personal devices (BYOD) must not be used to access, store, or transmit classified or sensitive CMC data.
+- **Clause 3.5:** Lost or stolen personal devices containing CMC email must be reported to the IT helpdesk within 4 hours.
+- **Clause 4.1:** Passwords must not be shared with anyone, including IT staff members.
+- **Clause 4.4:** Multi-factor authentication (MFA) is mandatory for all remote access to CMC systems.
+- **Clause 5.1:** Confidential or Restricted data must not be stored on personal devices or unapproved cloud storage systems.
+- **Clause 5.2:** Forwarding CMC emails containing Confidential data to personal email accounts is strictly prohibited.
+- **Clause 6.2:** CMC email addresses must not be used to register for personal services, social media, or non-work subscriptions.
+- **Clause 7.3:** CMC reserves the right to monitor, access, and audit any activity on corporate systems without prior notice.

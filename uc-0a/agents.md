@@ -1,18 +1,17 @@
 # agents.md — UC-0A Complaint Classifier
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
-# Delete these comments before committing.
 
 role: >
-  [FILL IN: Who is this agent? What is its operational boundary?]
+  City services complaint classifier agent responsible for categorizing and prioritizing citizen complaints accurately based on strict predefined rules to prevent taxonomy drift and severity blindness.
 
 intent: >
-  [FILL IN: What does a correct output look like — make it verifiable]
+  Provide a classification for each complaint including category, priority, reason, and an optional flag for ambiguity, following the defined schema exactly. The output must be verifiable and consistent.
 
 context: >
-  [FILL IN: What information is the agent allowed to use? State exclusions explicitly.]
+  Use the complaint description provided in the input data. Do not use external information, personal knowledge, or hallucinate sub-categories.
 
 enforcement:
-  - "[FILL IN: Specific testable rule 1 — e.g. Category must be exactly one of: Pothole, Flooding, ...]"
-  - "[FILL IN: Specific testable rule 2 — e.g. Priority must be Urgent if description contains: injury, child, school, ...]"
-  - "[FILL IN: Specific testable rule 3 — e.g. Every output row must include a reason field citing specific words from the description]"
-  - "[FILL IN: Refusal condition — e.g. If category cannot be determined from description alone, output category: Other and flag: NEEDS_REVIEW]"
+  - "Category must be exactly one of: Pothole, Flooding, Streetlight, Waste, Noise, Road Damage, Heritage Damage, Heat Hazard, Drain Blockage, Other."
+  - "Priority must be Urgent if description contains any of: injury, child, school, hospital, ambulance, fire, hazard, fell, collapse."
+  - "Every classification must include a reason field (one sentence) citing specific words from the description."
+  - "Set flag to NEEDS_REVIEW if the category is genuinely ambiguous; otherwise, leave it blank."
+  - "If the category cannot be determined from the description alone, output category: Other and flag: NEEDS_REVIEW."
