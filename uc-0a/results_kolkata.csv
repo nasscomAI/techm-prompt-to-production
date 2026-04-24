@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Heritage Damage,Standard,The description mentions 'heritage' indicating heritage damage and standard priority.,
+KM-202402,Other,Standard,The description mentions '' indicating other and standard priority.,
+KM-202405,Noise,Standard,The description mentions 'playing' indicating noise and standard priority.,
+KM-202409,Pothole,Standard,The description mentions 'pothole' indicating pothole and standard priority.,
+KM-202410,Pothole,Standard,"The description mentions 'pothole, tyre' indicating pothole and standard priority.",
+KM-202411,Pothole,Standard,The description mentions 'pothole' indicating pothole and standard priority.,NEEDS_REVIEW
+KM-202415,Flooding,Standard,The description mentions 'rain' indicating flooding and standard priority.,
+KM-202418,Waste,Standard,The description mentions 'overflowing' indicating waste and standard priority.,NEEDS_REVIEW
+KM-202421,Road Damage,Urgent,"The description mentions 'sinking, fell, hospital, fell' indicating road damage and urgent priority.",
+KM-202422,Other,Standard,The description mentions '' indicating other and standard priority.,
+KM-202426,Heritage Damage,Standard,The description mentions 'heritage' indicating heritage damage and standard priority.,
+KM-202430,Waste,Standard,The description mentions 'smell' indicating waste and standard priority.,
+KM-202434,Heritage Damage,Standard,The description mentions 'heritage' indicating heritage damage and standard priority.,
+KM-202436,Streetlight,Standard,The description mentions 'dark' indicating streetlight and standard priority.,
+KM-202438,Heritage Damage,Standard,The description mentions 'heritage' indicating heritage damage and standard priority.,
