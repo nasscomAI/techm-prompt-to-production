@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202402,Road Damage,Standard,Description indicates damage to road surface or footpath.,
+KM-202405,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202409,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+KM-202410,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+KM-202411,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+KM-202415,Drain Blockage,Standard,Description mentions blocked drain or manhole issues.,
+KM-202418,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+KM-202421,Road Damage,Urgent,"Description indicates damage to road surface or footpath. Determined to be Urgent due to severity keywords: hospital, fell.",
+KM-202422,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202426,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202430,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+KM-202434,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202436,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+KM-202438,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW

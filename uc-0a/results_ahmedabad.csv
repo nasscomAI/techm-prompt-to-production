@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202402,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202405,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202406,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202407,Other,Urgent,Cannot unambiguously determine category from description. Determined to be Urgent due to severity keywords: child.,NEEDS_REVIEW
+AM-202410,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+AM-202414,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202417,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+AM-202421,Noise,Standard,Description mentions loud music or noise.,
+AM-202424,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202429,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202431,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202435,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+AM-202444,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+AM-202445,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW

@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+PM-202402,Pothole,Urgent,"Description explicitly mentions the word 'pothole'. Determined to be Urgent due to severity keywords: child, school.",
+PM-202406,Flooding,Standard,Description specifically mentions underpass flooded knee-deep.,
+PM-202408,Drain Blockage,Standard,Description mentions 'drain'.,
+PM-202410,Streetlight,Standard,Description describes issues with streetlights or darkness.,
+PM-202411,Streetlight,Urgent,Description describes issues with streetlights or darkness. Determined to be Urgent due to severity keywords: hazard.,
+PM-202413,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+PM-202418,Noise,Standard,Description mentions loud music or noise.,
+PM-202419,Road Damage,Standard,Description indicates damage to road surface or footpath.,
+PM-202420,Other,Urgent,Missing manhole cover is ambiguous and requires review. Determined to be Urgent due to severity keywords: injury.,NEEDS_REVIEW
+PM-202427,Flooding,Standard,Description mentions flooding or water.,
+PM-202428,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+PM-202430,Streetlight,Standard,Safety concern for pedestrians on heritage street due to lights out.,
+PM-202433,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+PM-202446,Road Damage,Urgent,Description indicates broken and upturned footpath tiles. Determined to be Urgent due to severity keywords: fell.,

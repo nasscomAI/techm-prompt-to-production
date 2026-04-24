@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,Description mentions flooding or water. Determined to be Urgent due to severity keywords: ambulance.,
+GH-202402,Drain Blockage,Standard,Description mentions 'drain'.,
+GH-202406,Drain Blockage,Standard,Description mentions blocked drain or manhole issues.,
+GH-202407,Drain Blockage,Standard,Description mentions blocked drain or manhole issues.,
+GH-202410,Pothole,Standard,Description explicitly mentions the word 'pothole'.,
+GH-202411,Pothole,Urgent,Description explicitly mentions the word 'pothole'. Determined to be Urgent due to severity keywords: hospital.,
+GH-202412,Pothole,Urgent,Description explicitly mentions the word 'pothole'. Determined to be Urgent due to severity keywords: school.,
+GH-202417,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+GH-202420,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+GH-202422,Other,Urgent,Cannot unambiguously determine category from description. Determined to be Urgent due to severity keywords: collapse.,NEEDS_REVIEW
+GH-202424,Flooding,Standard,Description mentions flooding or water.,
+GH-202428,Waste,Standard,"Description mentions garbage, waste, or dead animal.",
+GH-202432,Other,Standard,Cannot unambiguously determine category from description.,NEEDS_REVIEW
+GH-202448,Drain Blockage,Standard,Description mentions 'drain'.,
+GH-202438,Flooding,Standard,Description mentions flooding or water.,
