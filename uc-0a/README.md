@@ -38,9 +38,19 @@ python classifier.py \
 
 ---
 
-## Skills to Define in skills.md
-- `classify_complaint` — one complaint row in → category + priority + reason + flag out
-- `batch_classify` — reads input CSV, applies classify_complaint per row, writes output CSV
+## Skills
+
+### classify_complaint
+Classifies a single complaint row by extracting category, priority, reason, and ambiguity flag.
+- **Input:** Dict with `description` (str, non-empty complaint description)
+- **Output:** Dict with `category`, `priority`, `reason`, `flag`
+- **Error handling:** If description is empty/unparseable, return `category: Other`, `priority: Standard`, `reason: Unable to classify`, `flag: NEEDS_REVIEW`
+
+### batch_classify
+Reads input CSV, applies classify_complaint to each row, writes output CSV.
+- **Input:** Path to CSV file with `description` column; output file path
+- **Output:** CSV file with columns: `category`, `priority`, `reason`, `flag`
+- **Error handling:** Raise error with file path/row number if input malformed; raise error if output path not writable
 
 ---
 
