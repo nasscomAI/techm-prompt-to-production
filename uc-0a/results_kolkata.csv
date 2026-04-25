@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Heritage Damage,Standard,Heritage lamp post knocked over by delivery vehicle and not restored.,
+KM-202402,Heritage Damage,Standard,Historic tram road cobblestones have been broken up by cable laying work.,
+KM-202405,Noise,Standard,Wedding band playing near Tagore Museum at 11pm during festival season is causing noise disturbance.,
+KM-202409,Pothole,Urgent,The complaint describes an 'Airport access road full of potholes' which requires urgent attention due to the critical infrastructure impact.,
+KM-202410,Pothole,Urgent,The pothole is causing tyre blowouts which represents a hazard to public safety.,
+KM-202411,Pothole,Urgent,The complaint describes a deep pothole with rainwater that poses an 'Accident risk'.,
+KM-202415,Drain Blockage,Standard,"The complaint describes a residential complex draining directly onto public road, which indicates improper drainage management.",
+KM-202418,Waste,Standard,"The complaint describes waste overflowing in a tourist zone, which impacts public spaces and visitor experience.",
+KM-202421,Road Damage,Urgent,An elderly pedestrian fell and required a hospital visit due to the broken and sinking footpath.,
+KM-202422,Road Damage,Urgent,The complaint describes a 'buckled' road surface with a 'structural concern' that poses a potential hazard.,
+KM-202426,Heritage Damage,Standard,Heritage residential building exterior defaced by billboard installation.,
+KM-202430,Road Damage,Urgent,"Road subsided near gas pipeline with gas leak smell reported, which constitutes a hazard.",
+KM-202434,Heritage Damage,Standard,The complaint states that heritage stone was not replaced after street paving removal for utility work.,
+KM-202436,Other,Standard,"The complaint describes a substation trip causing darkness for 3 nights, which is an electrical infrastructure issue not covered by standard municipal complaint categories.",NEEDS_REVIEW
+KM-202438,Noise,Standard,Street vendors using amplifiers illegally are causing noise disturbance in the heritage precinct.,
