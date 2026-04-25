@@ -1,0 +1,11 @@
+complaint_id,description,category,priority,reason,flag
+1,Large pothole on the main road near the market,Pothole,Standard,Categorized as pothole due to the word 'pothole'.,
+2,Streetlight is not working since last week,Streetlight,Standard,Categorized as streetlight due to the word 'streetlight'.,
+3,Heavy flooding near the hospital area,Flooding,Urgent,Categorized as flooding due to the word 'flooding' and flagged as urgent because it mentions 'hospital'.,
+4,Loud noise from a nearby construction site at night,Noise,Standard,Categorized as noise due to the word 'noise'.,
+5,A child fell into an open drain,Drain Blockage,Urgent,Categorized as drain blockage due to the word 'drain' and flagged as urgent because it mentions 'child'.,
+6,Garbage pile up near the school gate,Waste,Urgent,Categorized as waste due to the word 'garbage' and flagged as urgent because it mentions 'school'.,
+7,Ancient heritage wall damaged by recent rains,Heritage Damage,Standard,Categorized as heritage damage due to the word 'heritage'.,
+8,The road surface has major cracks and is rugged,Road Damage,Standard,Categorized as road damage due to the word 'rugged'.,
+9,Heat wave causing exhaustion among traffic police,Heat Hazard,Standard,Categorized as heat hazard due to the word 'heat'.,
+10,Some random issue that is hard to categorize,Other,Standard,Category could not be determined from the description.,NEEDS_REVIEW

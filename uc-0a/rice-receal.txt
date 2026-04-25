@@ -1,0 +1,34 @@
+Rice Framework:
+
+1. Run native prompt: 'classift this citizen complaint by category and priority' - record failures
+2. Show: taxonomy drift, severity blindnewss, no reason field
+3. Run RICE prompt - show the fix.
+4. Key line: "Enforcement is the only difference between a prompt and a system"
+
+Readme.md:
+
+    - Its project requirement documentation.
+
+Agents.md
+
+    - Its acting as a blueprint for the agent.
+    - Its will mentions the rice framework components
+        - R - Role - Who the agent is
+        - I - Intent - What the agent needs to do
+        - C - Context - What the agent needs to know
+        - E - Enforcement - What the agent needs to enforce
+
+Skills.md
+
+    -Its acting as a tools/functionality of agent
+    -Its will lists the actions (skills) the agent can perform.
+        - Skills are nothing but the prompts that are  required to perform the task
+        
+    -Its will mentions the skill dependencies
+    -Its will mentions the skill triggers
+    -Its will mentions the skill outputs
+
+Assignment Steps:
+
+1. Use Readme.md to update Agent.md and based on Agent.md update skils.md
+2. Update the classifier.py based on agents.md and skils.md 
