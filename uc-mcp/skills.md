@@ -12,13 +12,33 @@
 
 skills:
   - name: query_policy_documents
-    description: "[FILL IN]"
-    input: "[FILL IN: question string]"
-    output: "[FILL IN: MCP content format — content array + isError]"
-    error_handling: "[FILL IN: what happens when RAG refuses or raises exception]"
+    description: >
+    Answers natural-language questions strictly using the CMC HR Leave Policy,
+    CMC IT Acceptable Use Policy, and CMC Finance Reimbursement Policy. This skill
+    MUST NOT be used for questions outside these three documents.
+    input: question: string (required, non-empty)
+    output: >
+    A text answer derived from the relevant policy document(s), including
+    cited sources. Successful responses summarize only what is stated in
+    the policies.
+    error_handling: >
+    If the underlying RAG system determines the question is out of scope or
+    returns refused=true, the skill MUST return an application-level error
+    with isError: true and a refusal message stating that the question is
+    outside the supported policy documents. Empty responses are forbidden.
 
   - name: serve_mcp
-    description: "[FILL IN]"
-    input: "[FILL IN: HTTP POST with JSON-RPC body]"
-    output: "[FILL IN: JSON-RPC 2.0 response, always HTTP 200]"
-    error_handling: "[FILL IN: unknown method → -32601, malformed request → -32700]"
+    description: >
+    Runs a plain HTTP MCP server that exposes available tools and executes
+    tool calls using JSON-RPC 2.0. Handles tool discovery and invocation for
+    query_policy_documents.
+    input: port: integer (optional, default 8765)
+    output: >
+    JSON-RPC compliant responses over HTTP, including tools/list results
+    and tools/call execution outputs.
+    error_handling: >
+    Unknown JSON-RPC methods MUST return a JSON-RPC error with code -32601
+    (Method not found). All application-level errors MUST be encoded in
+    JSON-RPC responses with HTTP 200 status. Transport or server failures
+    may use HTTP 4xx/5xx. The server MUST never return an empty content array
+    on failure.
