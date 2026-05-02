@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,Classified as Flooding because the description mentions 'flood' and assigned Urgent priority due to the severity trigger 'ambulance'.,
+GH-202402,Flooding,Standard,Classified as Flooding because the description mentions 'flood'.,NEEDS_REVIEW
+GH-202406,Drain Blockage,Standard,"Classified as Drain Blockage because the description mentions 'drain, blocked'.",
+GH-202407,Drain Blockage,Standard,"Classified as Drain Blockage because the description mentions 'drain, blocked'.",
+GH-202410,Pothole,Standard,Classified as Pothole because the description mentions 'pothole'.,
+GH-202411,Pothole,Urgent,Classified as Pothole because the description mentions 'pothole' and assigned Urgent priority due to the severity trigger 'hospital'.,
+GH-202412,Pothole,Urgent,Classified as Pothole because the description mentions 'pothole' and assigned Urgent priority due to the severity trigger 'school'.,
+GH-202417,Waste,Standard,"Classified as Waste because the description mentions 'garbage, waste'.",NEEDS_REVIEW
+GH-202420,Noise,Standard,Classified as Noise because the description mentions 'drilling'.,
+GH-202422,Pothole,Urgent,Classified as Pothole because the description mentions 'crater' and assigned Urgent priority due to the severity trigger 'collapse'.,NEEDS_REVIEW
+GH-202424,Flooding,Standard,Classified as Flooding because the description mentions 'flood'.,NEEDS_REVIEW
+GH-202428,Waste,Standard,Classified as Waste because the description mentions 'waste'.,NEEDS_REVIEW
+GH-202432,Noise,Standard,Classified as Noise because the description mentions 'idling'.,
+GH-202448,Flooding,Standard,"Classified as Flooding because the description mentions 'flood, flooding'.",NEEDS_REVIEW
+GH-202438,Flooding,Standard,Classified as Flooding because the description mentions 'rainwater'.,

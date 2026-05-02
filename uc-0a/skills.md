@@ -1,16 +1,12 @@
-# skills.md
-# INSTRUCTIONS: Generate a draft by prompting AI, then manually refine this file.
-# Delete these comments before committing.
+- name: classify_complaint
+  description: Classifies a single citizen complaint row into a strict taxonomy and priority level with justification.
+  input: Object (JSON-like complaint row)
+  output: Object (JSON-like result with category, priority, reason, and flag)
+  error_handling: Sets the flag field to NEEDS_REVIEW if the category is ambiguous and enforces strict priority logic for severity keywords.
 
-skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+- name: batch_classify
+  description: Automates the classification of complaints by processing an input CSV file and generating an output results CSV.
+  input: String (file path to input CSV)
+  output: String (file path to output CSV)
+  error_handling: Detects and handles empty input files, category name variations, priority misclassifications, missing justification, and ambiguous classifications by flagging them for review and maintaining taxonomic consistency.
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
