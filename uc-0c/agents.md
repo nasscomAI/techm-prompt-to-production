@@ -1,18 +1,39 @@
 # agents.md
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
-# Delete these comments before committing.
 
-role: >
-  [FILL IN: Who is this agent? What is its operational boundary?]
+## Enforcement Rules
 
-intent: >
-  [FILL IN: What does a correct output look like — make it verifiable]
+1. Aggregation Rule
+- Never aggregate across wards or categories unless explicitly instructed.
+- If such a request is detected → REFUSE with explanation.
 
-context: >
-  [FILL IN: What information is the agent allowed to use? State exclusions explicitly.]
+2. NULL Handling Rule
+- Detect NULL values in `actual_spend` BEFORE any computation.
+- For every NULL row, report:
+  - period
+  - ward
+  - category
+  - reason from `notes`
+- NULL values must NEVER be used in growth calculations.
 
-enforcement:
-  - "[FILL IN: Specific testable rule 1]"
-  - "[FILL IN: Specific testable rule 2]"
-  - "[FILL IN: Specific testable rule 3]"
-  - "[FILL IN: Refusal condition — when should the system refuse rather than guess?]"
+3. Growth Calculation Rule
+- Growth must be computed ONLY at:
+  ward + category level
+- Each output row must include:
+  - actual value
+  - growth %
+  - formula used
+
+4. Growth-Type Rule
+- If `--growth-type` is missing:
+  → REFUSE execution
+  → Ask user to specify (MoM / YoY)
+- Do NOT assume or default.
+
+5. Output Integrity Rule
+- Output must be a per-period table (NOT a single number)
+- Maintain chronological order
+
+6. NULL Output Rule
+- If a row contains NULL:
+  - growth = "FLAGGED"
+  - formula = "NULL value → cannot compute"
