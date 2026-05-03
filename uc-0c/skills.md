@@ -3,14 +3,14 @@
 # Delete these comments before committing.
 
 skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: load_dataset
+    description: [reads the CSV file and returns a summary of the budget]
+    input: [data/budget/ward_budget.csv]
+    output: [uc-0c/growth_output.csv]
+    error_handling: [flags null rows before computing]
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: compute_growth
+    description: takes ward + category + growth_type, returns per-period table with formula shown
+    input: [ward, category, growth_type]
+    output: [summary of the budget with growth]
+    error_handling: [refuses to compute when input is invalid or ambiguous]
