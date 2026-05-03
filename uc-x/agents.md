@@ -68,3 +68,4 @@ enforcement:
   - FIN-POL-007 section 2.6 must state that DA and meal receipts cannot be
     claimed simultaneously for the same day; softening this to "not recommended"
     or similar is a failure.
+
