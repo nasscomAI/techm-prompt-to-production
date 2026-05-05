@@ -1,6 +1,6 @@
 # Assignment Guide
 
-**TechM · prompt-to-production**
+**Nasscom AI-Code Sarathi · prompt-to-production**
 
 This guide walks you through completing the workshop assignment from start to finish.
 Follow every step in order. Do not skip sections.
@@ -10,7 +10,7 @@ Follow every step in order. Do not skip sections.
 ## Contents
 
 1. [What You Need](#1-what-you-need)
-2. [Get the Repository](#2-get-the-repository)
+2. [Fork the Repository](#2-fork-the-repository)
 3. [Clone to Your Computer](#3-clone-to-your-computer)
 4. [Create Your Branch](#4-create-your-branch)
 5. [How the Assignment Works](#5-how-the-assignment-works)
@@ -68,33 +68,47 @@ python3 -c "import csv, json; print('Ready')"   # Must print: Ready
 
 ---
 
-## 2. Get the Repository
+## 2. Fork the Repository
 
-1. Go to:
+Forking creates your own copy of the repository on GitHub. You will do all your
+work in your fork.
+
+1. Open your web browser and go to:
 
    ```
-   https://github.com/nasscomAI/techm-prompt-to-production
+   https://github.com/nasscomAI/prompt-to-production
    ```
 
-2. Click **Clone** → copy the URL.
+2. Click the **Fork** button in the top-right corner of the page.
 
-3. Clone the repo:
+3. On the "Create a new fork" screen:
+   - **Owner** — select your own GitHub username
+   - **Repository name** — leave it as `prompt-to-production`
+   - Leave all other settings as default
+
+4. Click **Create fork**.
+
+5. GitHub will redirect you to your fork. The URL will now show your username:
    ```
-   git clone https://github.com/nasscomAI/techm-prompt-to-production.git
+   https://github.com/[your-username]/prompt-to-production
    ```
+
+> **You now have your own copy of the repository.** All changes you make
+> will go into your fork. You will submit your work by opening a Pull Request
+> from your fork back to the original.
 
 ---
 
 ## 3. Clone to Your Computer
 
-Cloning downloads the repo to your local machine so you can edit files.
+Cloning downloads your fork to your local machine so you can edit files.
 
 1. Open **GitHub Desktop**.
 
 2. Click **File → Clone Repository** from the menu.
 
-3. Click the **GitHub.com** tab. Select `techm-prompt-to-production`
-   from the list.
+3. Click the **GitHub.com** tab. Your fork `prompt-to-production` should appear
+   in the list. Click it.
 
 4. Under **Local Path**, choose a folder on your computer where the repo will
    be saved. Note this location — you will need to navigate to it later.
@@ -109,7 +123,7 @@ Cloning downloads the repo to your local machine so you can edit files.
 > You should see the following structure:
 >
 > ```
-> techm-prompt-to-production/
+> prompt-to-production/
 > ├── resources/
 > ├── uc-0a/
 > ├── uc-0b/
@@ -135,16 +149,16 @@ branch and use it for the entire assignment. Do not create multiple branches.
 3. Name your branch exactly as follows — replace the placeholders:
 
    ```
-   participant/[your-name]-techm
+   participant/[your-name]-[city]
    ```
 
    **Examples:**
 
    ```
-   participant/arshdeep-techm
-   participant/priya-techm
-   participant/rahul-techm
-   participant/deepa-techm
+   participant/arshdeep-pune
+   participant/priya-hyderabad
+   participant/rahul-kolkata
+   participant/deepa-ahmedabad
    ```
 
    Use lowercase only. Use hyphens, not spaces.
@@ -181,7 +195,7 @@ For every use case, you follow this sequence:
 3. Generate skills.md using AI     → paste the README, get YAML, update it
 4. Build the .py file using AI     → prompt AI coder, run the code
 5. Commit your work                → one commit per UC with a meaningful message
-6. Push to GitHub                  → send your branch to origin
+6. Push to GitHub                  → send your branch to your fork
 ```
 
 ### The RICE Framework — What It Is
@@ -605,36 +619,36 @@ final
 
 ## 13. Step 6 — Push to GitHub
 
-Pushing sends your committed work from your local machine to the repo on GitHub.
+Pushing sends your committed work from your local machine to your fork on GitHub.
 
 1. In **GitHub Desktop**, after committing, look at the top bar.
 2. Click **Push origin**.
-3. GitHub Desktop uploads your branch and commits.
+3. GitHub Desktop uploads your branch and commits to your fork.
 4. When complete, the button changes to **Fetch origin**.
 
 **Verify the push worked:**
 
 1. Open your browser and go to:
    ```
-   https://github.com/nasscomAI/techm-prompt-to-production
+   https://github.com/[your-username]/prompt-to-production
    ```
 2. Click the **branches** dropdown (shows `main` by default).
-3. Your branch `participant/[your-name]-techm` should appear in the list.
+3. Your branch `participant/[your-name]-[city]` should appear in the list.
 4. Click your branch and verify your files are visible.
 
 ---
 
 ## 14. Step 7 — Open a Pull Request
 
-A Pull Request (PR) is your submission. It sends your work from your branch
-to the main repository for review.
+A Pull Request (PR) is your submission. It sends your work from your fork
+back to the original repository.
 
 ### 14.1 Open the PR
 
-1. Go to the repository:
+1. Go to the original repository:
 
    ```
-   https://github.com/nasscomAI/techm-prompt-to-production
+   https://github.com/nasscomAI/prompt-to-production
    ```
 
 2. GitHub will show a banner at the top:
