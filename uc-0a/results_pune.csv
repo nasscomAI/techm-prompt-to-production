@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,Classified as Pothole based on 'pothole'; no severity risk keywords detected.,
+PM-202402,Pothole,Urgent,Classified as Pothole based on 'pothole'; priority Urgent due to 'child'.,
+PM-202406,Flooding,Standard,Classified as Flooding based on 'flooded'; no severity risk keywords detected.,
+PM-202408,Drain Blockage,Standard,Classified as Drain Blockage based on 'drain blocked'; no severity risk keywords detected.,NEEDS_REVIEW
+PM-202410,Streetlight,Standard,Classified as Streetlight based on 'streetlights out'; no severity risk keywords detected.,
+PM-202411,Streetlight,Urgent,Classified as Streetlight based on 'streetlight'; priority Urgent due to 'hazard'.,
+PM-202413,Waste,Standard,Classified as Waste based on 'garbage'; no severity risk keywords detected.,
+PM-202418,Noise,Standard,Classified as Noise based on 'music'; no severity risk keywords detected.,
+PM-202419,Road Damage,Standard,Classified as Road Damage based on 'road surface'; no severity risk keywords detected.,
+PM-202420,Road Damage,Urgent,Classified as Road Damage based on 'manhole cover missing'; priority Urgent due to 'injury'.,
+PM-202427,Flooding,Standard,Classified as Flooding based on 'floods'; no severity risk keywords detected.,
+PM-202428,Waste,Standard,Classified as Waste based on 'dead animal'; no severity risk keywords detected.,
+PM-202430,Streetlight,Standard,Classified as Streetlight based on 'lights out'; no severity risk keywords detected.,
+PM-202433,Waste,Standard,Classified as Waste based on 'waste'; no severity risk keywords detected.,
+PM-202446,Road Damage,Urgent,Classified as Road Damage based on 'footpath'; priority Urgent due to 'fell'.,

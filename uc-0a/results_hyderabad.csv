@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,Classified as Flooding based on 'flooded'; priority Urgent due to 'ambulance'.,
+GH-202402,Drain Blockage,Standard,Classified as Drain Blockage based on 'drain completely blocked'; no severity risk keywords detected.,NEEDS_REVIEW
+GH-202406,Drain Blockage,Standard,Classified as Drain Blockage based on 'stormwater drain'; no severity risk keywords detected.,
+GH-202407,Drain Blockage,Standard,Classified as Drain Blockage based on 'drain blocked'; no severity risk keywords detected.,
+GH-202410,Pothole,Standard,Classified as Pothole based on 'pothole'; no severity risk keywords detected.,
+GH-202411,Pothole,Urgent,Classified as Pothole based on 'pothole'; priority Urgent due to 'hospital'.,
+GH-202412,Pothole,Urgent,Classified as Pothole based on 'pothole'; priority Urgent due to 'school'.,
+GH-202417,Waste,Standard,Classified as Waste based on 'garbage'; no severity risk keywords detected.,NEEDS_REVIEW
+GH-202420,Noise,Standard,Classified as Noise based on 'drilling'; no severity risk keywords detected.,
+GH-202422,Road Damage,Urgent,Classified as Road Damage based on 'road collapsed'; priority Urgent due to 'collapse'.,
+GH-202424,Flooding,Standard,Classified as Flooding based on 'floods'; no severity risk keywords detected.,
+GH-202428,Waste,Standard,Classified as Waste based on 'waste'; no severity risk keywords detected.,
+GH-202432,Noise,Standard,Classified as Noise based on 'engines on'; no severity risk keywords detected.,
+GH-202448,Drain Blockage,Standard,Classified as Drain Blockage based on 'drain blocked'; no severity risk keywords detected.,NEEDS_REVIEW
+GH-202438,Flooding,Standard,Classified as Flooding based on 'rainwater through'; no severity risk keywords detected.,
