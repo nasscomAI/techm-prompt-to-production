@@ -3,14 +3,14 @@
 # Delete these comments before committing.
 
 skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: load_dataset
+    description: Loads and validates the budget CSV dataset, reporting null counts and specific null rows.
+    input: File path to CSV (string).
+    output: Pandas DataFrame with validated columns.
+    error_handling: Raises error if required columns missing or file not found; reports null details.
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: compute_growth
+    description: Computes growth rates for a specific ward and category, handling nulls and showing formulas.
+    input: DataFrame, ward (string), category (string), growth_type ('MoM' or 'YoY').
+    output: List of dicts with period, actual_spend, growth_percentage, formula_used, flag.
+    error_handling: Flags null rows, skips growth calculation for nulls, refuses invalid growth_type.
