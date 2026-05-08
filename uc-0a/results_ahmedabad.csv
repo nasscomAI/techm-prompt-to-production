@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW
+Heat Hazard,Standard,Category set to Heat Hazard based on description. priority set to Standard because no urgent keywords were found.,
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW
+Heat Hazard,Standard,Category set to Heat Hazard based on description. priority set to Standard because no urgent keywords were found.,
+Other,Urgent,Category set to Other because description is not clear. priority set to Urgent because it mentions 'child'.,NEEDS_REVIEW
+Pothole,Standard,Category set to Pothole based on description. priority set to Standard because no urgent keywords were found.,
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW
+Waste,Standard,Category set to Waste based on description. priority set to Standard because no urgent keywords were found.,
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW
+Road Damage,Standard,Category set to Road Damage based on description. priority set to Standard because no urgent keywords were found.,
+Heat Hazard,Standard,Category set to Heat Hazard based on description. priority set to Standard because no urgent keywords were found.,
+Heritage Damage,Standard,Category set to Heritage Damage based on description. priority set to Standard because no urgent keywords were found.,
+Heat Hazard,Standard,Category set to Heat Hazard based on description. priority set to Standard because no urgent keywords were found.,
+Waste,Standard,Category set to Waste based on description. priority set to Standard because no urgent keywords were found.,
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW

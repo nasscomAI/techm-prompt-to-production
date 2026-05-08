@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Pothole,Standard,Category set to Pothole based on description. priority set to Standard because no urgent keywords were found.,
+Pothole,Urgent,Category set to Pothole based on description. priority set to Urgent because it mentions 'child'.,
+Flooding,Standard,Category set to Flooding based on description. priority set to Standard because no urgent keywords were found.,
+Drain Blockage,Standard,Category set to Drain Blockage based on description. priority set to Standard because no urgent keywords were found.,
+Streetlight,Standard,Category set to Streetlight based on description. priority set to Standard because no urgent keywords were found.,
+Streetlight,Urgent,Category set to Streetlight based on description. priority set to Urgent because it mentions 'hazard'.,
+Waste,Standard,Category set to Waste based on description. priority set to Standard because no urgent keywords were found.,
+Noise,Low,Category set to Noise based on description. priority set to Low because no urgent keywords were found.,
+Road Damage,Standard,Category set to Road Damage based on description. priority set to Standard because no urgent keywords were found.,
+Road Damage,Urgent,Category set to Road Damage based on description. priority set to Urgent because it mentions 'injury'.,
+Flooding,Standard,Category set to Flooding based on description. priority set to Standard because no urgent keywords were found.,
+Other,Standard,Category set to Other because description is not clear. priority set to Standard because no urgent keywords were found.,NEEDS_REVIEW
+Streetlight,Standard,Category set to Streetlight based on description. priority set to Standard because no urgent keywords were found.,
+Waste,Standard,Category set to Waste based on description. priority set to Standard because no urgent keywords were found.,
+Road Damage,Urgent,Category set to Road Damage based on description. priority set to Urgent because it mentions 'fell'.,
