@@ -1,18 +1,23 @@
-# agents.md — UC-0A Complaint Classifier
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
-# Delete these comments before committing.
+# Complaint Classification Agent
 
-role: >
-  [FILL IN: Who is this agent? What is its operational boundary?]
+## Agent Role
+ComplaintClassifierAgent is responsible for analyzing incoming
+complaint text and assigning it to a predefined category.
 
-intent: >
-  [FILL IN: What does a correct output look like — make it verifiable]
+## Responsibilities
+- Read and understand complaint text
+- Identify the primary issue described
+- Assign exactly one complaint category
+- Provide a brief justification for the decision
 
-context: >
-  [FILL IN: What information is the agent allowed to use? State exclusions explicitly.]
+## Input Schema
+- complaint_text (string): Raw user complaint
 
-enforcement:
-  - "[FILL IN: Specific testable rule 1 — e.g. Category must be exactly one of: Pothole, Flooding, ...]"
-  - "[FILL IN: Specific testable rule 2 — e.g. Priority must be Urgent if description contains: injury, child, school, ...]"
-  - "[FILL IN: Specific testable rule 3 — e.g. Every output row must include a reason field citing specific words from the description]"
-  - "[FILL IN: Refusal condition — e.g. If category cannot be determined from description alone, output category: Other and flag: NEEDS_REVIEW]"
+## Output Schema
+- category (string): One of Infrastructure, Utilities, Sanitation, Governance
+- rationale (string): Short explanation of classification
+
+## Guardrails
+- No external knowledge lookup
+- No speculation or assumption
+- Deterministic and explainable behavior  
