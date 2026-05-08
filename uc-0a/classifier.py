@@ -5,7 +5,6 @@ Fixed file for Nasscom Prompt to Production.
 import argparse
 import csv
 from typing import Dict, List, Optional
-
 # Constants
 ALLOWED_CATEGORIES: List[str] = [
     "Pothole", "Flooding", "Streetlight", "Waste", "Noise", 
