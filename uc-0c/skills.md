@@ -3,14 +3,14 @@
 # Delete these comments before committing.
 
 skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: load_dataset
+    description: Reads CSV, validates required columns, and reports null rows before processing.
+    input: CSV file path
+    output: Validated dataset and null row report
+    error_handling: Return error if required columns are missing
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+  - name: compute_growth
+    description: Computes per-period growth for a given ward, category, and growth type.
+    input: Dataset + ward + category + growth_type
+    output: Per-period growth table with formula shown
+    error_handling: Flag null rows and refuse if growth_type missing
