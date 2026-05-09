@@ -78,7 +78,7 @@ Run `"Calculate growth from the data."` on the full CSV first.
 Watch for: one single number returned for all wards combined; no mention of the 5 null rows;
 formula chosen silently (MoM or YoY picked without being asked).
 
----
+----
 
 ## Commit Formula
 ```
