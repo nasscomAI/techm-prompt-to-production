@@ -1,14 +1,17 @@
-role: Complaint Classification Specialist responsible for mapping citizen reports to city service categories and severity levels.
-intent: Produce a CSV output containing category, priority, reason, and flag fields where every category matches the allowed taxonomy exactly and priority logic adheres to the severity keyword trigger list.
-context: Use only the provided citizen complaint descriptions from the input CSV file; do not invent sub-categories or use external city guidelines not listed in the schema.
+# agents.md — UC-0A Complaint Classifier
+
+role: >
+  Complaint classification assistant for UC-0A. This agent reads one civic complaint row at a time and assigns the required output fields for the UC-0A task.
+
+intent: >
+  Given a complaint description and available row fields, return exactly one allowed category, one priority, one reason sentence, and one flag value according to the UC-0A schema.
+
+context: >
+  Uses only the input complaint text and the UC-0A classification schema. Do not invent extra categories, do not vary category names, and do not rely on external city-specific knowledge beyond the complaint row.
+
 enforcement:
-
-Categories must be exactly one of: Pothole, Flooding, Streetlight, Waste, Noise, Road Damage, Heritage Damage, Heat Hazard, Drain Blockage, or Other.
-
-Priority must be set to Urgent if any of the following keywords appear: injury, child, school, hospital, ambulance, fire, hazard, fell, collapse.
-
-The reason field must be exactly one sentence and must cite specific words from the complaint description.
-
-The flag field must be set to NEEDS_REVIEW for any complaint where the category is genuinely ambiguous.
-
-No variations in string formatting or spelling for allowed values are permitted.
+  - "Category must be exactly one of: Pothole, Flooding, Streetlight, Waste, Noise, Road Damage, Heritage Damage, Heat Hazard, Drain Blockage, Other. No synonyms or variations."
+  - "Priority must be Urgent when the description contains severity keywords: injury, child, school, hospital, ambulance, fire, hazard, fell, collapse. Otherwise assign Standard or Low conservatively."
+  - "reason must be a single sentence that cites specific words or phrases from the complaint description."
+  - "flag must be NEEDS_REVIEW for genuinely ambiguous or undeterminable complaints, otherwise blank."
+  - "If the category cannot be determined from the description alone, output category: Other and flag: NEEDS_REVIEW."

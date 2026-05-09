@@ -1,19 +1,18 @@
-name: classify_complaint
-description: Processes a single citizen complaint to determine its category, priority, and justification based on a strict taxonomy and severity keyword list.
-input:
-type: dictionary
-format: "{'description': string}"
-output:
-type: dictionary
-format: "{'category': string, 'priority': string, 'reason': string, 'flag': string}"
-error_handling: If the description contains no clear category, it assigns 'Other' and sets the flag to 'NEEDS_REVIEW'; if input is malformed, it returns a schema validation error.
+# skills.md
 
-name: batch_classify
-description: Reads an input CSV file of complaints, executes the classification logic for each row, and writes the structured results to a specified output CSV.
-input:
-type: file_path
-format: CSV file with 'description' column
-output:
-type: file_path
-format: CSV file with 'category', 'priority', 'reason', and 'flag' columns
-error_handling: Logs rows that fail strict enforcement rules, prevents execution if the taxonomy drift failure mode is detected, and ensures no rows are skipped due to ambiguity by applying the 'NEEDS_REVIEW' flag.
+skills:
+  - name: classify_complaint
+    description: Classify a single complaint row into category, priority, reason, and flag according to the UC-0A schema.
+    input: A complaint row object or dictionary with the complaint description and any related fields from the input CSV.
+    output: A dictionary containing:
+      - category: one of the allowed UC-0A categories
+      - priority: Urgent, Standard, or Low
+      - reason: one sentence citing specific words from the description
+      - flag: NEEDS_REVIEW or blank
+    error_handling: If the description is missing, unclear, or ambiguous, return category Other, flag NEEDS_REVIEW, and a reason noting the lack of determinative information.
+
+  - name: batch_classify
+    description: Read an input CSV, apply classify_complaint to each row, and write an output CSV with the required UC-0A fields.
+    input: Path to an input CSV file and a target output CSV file path, or a list of complaint rows.
+    output: A completed output CSV file or list of classified rows with category, priority, reason, and flag added.
+    error_handling: If a row is invalid, skip or preserve it with category Other and flag NEEDS_REVIEW, and log the issue for later review.
