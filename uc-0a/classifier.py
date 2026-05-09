@@ -1,35 +1,73 @@
-"""
-UC-0A — Complaint Classifier
-Starter file. Build this using the RICE → agents.md → skills.md → CRAFT workflow.
-"""
+import pandas as pd
 import argparse
-import csv
 
-def classify_complaint(row: dict) -> dict:
-    """
-    Classify a single complaint row.
-    Returns: dict with keys: complaint_id, category, priority, reason, flag
-    
-    TODO: Build this using your AI tool guided by your agents.md and skills.md.
-    Your RICE enforcement rules must be reflected in this function's behaviour.
-    """
-    raise NotImplementedError("Build this using your AI tool + RICE prompt")
+URGENT_KEYWORDS = [
+    "injury", "child", "school", "hospital",
+    "ambulance", "fire", "hazard", "fell", "collapse"
+]
+
+CATEGORY_MAP = {
+    "pothole": "Pothole",
+    "flood": "Flooding",
+    "waterlogging": "Flooding",
+    "streetlight": "Streetlight",
+    "light": "Streetlight",
+    "garbage": "Waste",
+    "waste": "Waste",
+    "noise": "Noise",
+    "road": "Road Damage",
+    "heritage": "Heritage Damage",
+    "heat": "Heat Hazard",
+    "drain": "Drain Blockage"
+}
+
+def classify_complaint(text):
+    text_lower = str(text).lower()
+
+    category = "Other"
+    flag = ""
+
+    for keyword, mapped_category in CATEGORY_MAP.items():
+        if keyword in text_lower:
+            category = mapped_category
+            break
+
+    priority = "Standard"
+
+    for keyword in URGENT_KEYWORDS:
+        if keyword in text_lower:
+            priority = "Urgent"
+            break
+
+    if category == "Other":
+        flag = "NEEDS_REVIEW"
+
+    reason = f"Detected keywords from complaint: {text}"
+
+    return category, priority, reason, flag
 
 
-def batch_classify(input_path: str, output_path: str):
-    """
-    Read input CSV, classify each row, write results CSV.
-    
-    TODO: Build this using your AI tool.
-    Must: flag nulls, not crash on bad rows, produce output even if some rows fail.
-    """
-    raise NotImplementedError("Build this using your AI tool + RICE prompt")
+def batch_classify(input_file, output_file):
+    df = pd.read_csv(input_file)
+
+    results = df["description"].apply(classify_complaint)
+
+    df[["category", "priority", "reason", "flag"]] = pd.DataFrame(
+        results.tolist(),
+        index=df.index
+    )
+
+    df.to_csv(output_file, index=False)
+
+    print(f"Results saved to {output_file}")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="UC-0A Complaint Classifier")
-    parser.add_argument("--input",  required=True, help="Path to test_[techm].csv")
-    parser.add_argument("--output", required=True, help="Path to write results CSV")
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--input", required=True)
+    parser.add_argument("--output", required=True)
+
     args = parser.parse_args()
+
     batch_classify(args.input, args.output)
-    print(f"Done. Results written to {args.output}")
