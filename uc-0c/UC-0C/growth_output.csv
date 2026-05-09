@@ -1,0 +1,13 @@
+period,ward,category,actual_spend,growth_pct,formula,flag,notes
+2024-01,Ward 1 – Kasba,Roads & Pothole Repair,13.30,,MoM: missing base period 2023-12 — cannot compute,MISSING_BASE_PERIOD,
+2024-02,Ward 1 – Kasba,Roads & Pothole Repair,12.20,-8.3%,MoM: (12.20 - 13.30) / 13.30 = -0.0827,OK,
+2024-03,Ward 1 – Kasba,Roads & Pothole Repair,12.30,+0.8%,MoM: (12.30 - 12.20) / 12.20 = 0.0082,OK,
+2024-04,Ward 1 – Kasba,Roads & Pothole Repair,13.40,+8.9%,MoM: (13.40 - 12.30) / 12.30 = 0.0894,OK,
+2024-05,Ward 1 – Kasba,Roads & Pothole Repair,14.10,+5.2%,MoM: (14.10 - 13.40) / 13.40 = 0.0522,OK,
+2024-06,Ward 1 – Kasba,Roads & Pothole Repair,14.80,+5.0%,MoM: (14.80 - 14.10) / 14.10 = 0.0496,OK,
+2024-07,Ward 1 – Kasba,Roads & Pothole Repair,19.70,+33.1%,MoM: (19.70 - 14.80) / 14.80 = 0.3311,OK,
+2024-08,Ward 1 – Kasba,Roads & Pothole Repair,20.20,+2.5%,MoM: (20.20 - 19.70) / 19.70 = 0.0254,OK,
+2024-09,Ward 1 – Kasba,Roads & Pothole Repair,20.10,-0.5%,MoM: (20.10 - 20.20) / 20.20 = -0.0050,OK,
+2024-10,Ward 1 – Kasba,Roads & Pothole Repair,13.10,-34.8%,MoM: (13.10 - 20.10) / 20.10 = -0.3483,OK,
+2024-11,Ward 1 – Kasba,Roads & Pothole Repair,14.20,+8.4%,MoM: (14.20 - 13.10) / 13.10 = 0.0840,OK,
+2024-12,Ward 1 – Kasba,Roads & Pothole Repair,12.70,-10.6%,MoM: (12.70 - 14.20) / 14.20 = -0.1056,OK,

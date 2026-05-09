@@ -68,4 +68,3 @@ Scope bleed to look for: phrases like "as is standard practice", "typically in g
 ## Commit Formula
 ```
 UC-0B Fix [failure mode]: [why it failed] → [what you changed]
-```

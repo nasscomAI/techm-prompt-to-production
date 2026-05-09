@@ -59,24 +59,26 @@ python app.py \
 
 ---
 
-## Enforcement Rules Your agents.md Must Include
-1. Never aggregate across wards or categories unless explicitly instructed — refuse if asked
-2. Flag every null row before computing — report null reason from the notes column
-3. Show formula used in every output row alongside the result
-4. If `--growth-type` not specified — refuse and ask, never guess
+## Agents & Enforcement
+
+Follow these project-level rules when implementing agents, scripts, or pipelines:
+
+- Never aggregate across wards or categories unless explicitly instructed — refuse and return an error message if a user requests an all-ward or all-category aggregation.
+- Flag every null `actual_spend` row before computing and include the `notes` column reason in the report.
+- Show the formula used for each computed growth value in every output row (e.g., "MoM: (this_month - last_month) / last_month").
+- If the `--growth-type` argument is not provided, refuse to run and return a clear message asking the user to specify `MoM` or `YoY`.
 
 ---
 
 ## Skills to Define in skills.md
-- `load_dataset` — reads CSV, validates columns, reports null count and which rows before returning
-- `compute_growth` — takes ward + category + growth_type, returns per-period table with formula shown
+- `load_dataset` — reads CSV, validates required columns (`period`, `ward`, `category`, `budgeted_amount`, `actual_spend`, `notes`), reports null count and the rows with nulls (including the `notes` field) before returning the dataset.
+- `compute_growth` — takes ward + category + growth_type (`MoM` or `YoY`), returns a per-period table filtered to that ward+category with the computed growth column, the formula string per row, and explicit flags for any rows with missing `actual_spend`.
 
 ---
 
 ## What Will Fail From the Naive Prompt
 Run `"Calculate growth from the data."` on the full CSV first.
-Watch for: one single number returned for all wards combined; no mention of the 5 null rows;
-formula chosen silently (MoM or YoY picked without being asked).
+Watch for: one single number returned for all wards combined; no mention of the 5 null rows; formula chosen silently (MoM or YoY picked without being asked).
 
 ---
 
