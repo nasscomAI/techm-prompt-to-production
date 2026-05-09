@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"Description contains 'flood', classified as Flooding.",
+GH-202402,Other,Standard,"Description matches multiple categories: Drain Blockage, Flooding.",NEEDS_REVIEW
+GH-202406,Other,Standard,"Description matches multiple categories: Drain Blockage, Flooding.",NEEDS_REVIEW
+GH-202407,Drain Blockage,Standard,"Description contains 'drain', classified as Drain Blockage.",
+GH-202410,Pothole,Standard,"Description contains 'pothole', classified as Pothole.",
+GH-202411,Pothole,Urgent,"Description contains 'pothole', classified as Pothole.",
+GH-202412,Pothole,Urgent,"Description contains 'pothole', classified as Pothole.",
+GH-202417,Other,Standard,"Description matches multiple categories: Heat Hazard, Heritage Damage, Waste.",NEEDS_REVIEW
+GH-202420,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+GH-202422,Other,Urgent,No recognizable complaint type in description.,NEEDS_REVIEW
+GH-202424,Other,Standard,"Description matches multiple categories: Flooding, Streetlight.",NEEDS_REVIEW
+GH-202428,Waste,Standard,"Description contains 'waste', classified as Waste.",
+GH-202432,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+GH-202448,Other,Standard,"Description matches multiple categories: Drain Blockage, Flooding.",NEEDS_REVIEW
+GH-202438,Flooding,Standard,"Description contains 'water', classified as Flooding.",

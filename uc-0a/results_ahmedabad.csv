@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202402,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202405,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202406,Heat Hazard,Standard,"Description contains 'heat', classified as Heat Hazard.",
+AM-202407,Other,Urgent,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202410,Pothole,Standard,"Description contains 'hole', classified as Pothole.",
+AM-202414,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202417,Other,Standard,"Description matches multiple categories: Heritage Damage, Waste.",NEEDS_REVIEW
+AM-202421,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202424,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202429,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
+AM-202431,Heritage Damage,Standard,"Description contains 'heritage', classified as Heritage Damage.",
+AM-202435,Heat Hazard,Standard,"Description contains 'heat', classified as Heat Hazard.",
+AM-202444,Waste,Standard,"Description contains 'waste', classified as Waste.",
+AM-202445,Other,Standard,No recognizable complaint type in description.,NEEDS_REVIEW
