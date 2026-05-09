@@ -34,9 +34,9 @@ Read `policy_hr_leave.txt` and map these 10 clauses. This is your ground truth.
 | 2.5 | Unapproved absence = LOP regardless of subsequent approval | will |
 | 2.6 | Max 5 days carry-forward. Above 5 forfeited on 31 Dec. | may / are forfeited |
 | 2.7 | Carry-forward days must be used Jan–Mar or forfeited | must |
-| 3.2 | 3+ consecutive sick days requires medical cert within 48hrs | requires |
+| 3.2 | 3 or 3+ consecutive sick days requires medical cert within 48hrs | requires |
 | 3.4 | Sick leave before/after holiday requires cert regardless of duration | requires |
-| 5.2 | LWP requires Department Head AND HR Director approval | requires |
+| 5.2 | LWP requires Manager,  Department Head AND HR Director approval | requires |
 | 5.3 | LWP >30 days requires Municipal Commissioner approval | requires |
 | 7.2 | Leave encashment during service not permitted under any circumstances | not permitted |
 

@@ -1,18 +1,17 @@
-# agents.md — UC-0A Complaint Classifier
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
-# Delete these comments before committing.
-
-role: >
-  [FILL IN: Who is this agent? What is its operational boundary?]
-
-intent: >
-  [FILL IN: What does a correct output look like — make it verifiable]
-
-context: >
-  [FILL IN: What information is the agent allowed to use? State exclusions explicitly.]
-
+role: Complaint classification agent for UC-0A, limited to labeling one city complaint row with the required output schema.
+intent: Produce a verified classification for a single complaint row, returning exact values for category, priority, reason, and flag according to the UC-0A schema and rules.
+context: Use only the complaint row data and the UC-0A classification schema from README; do not use external sources, do not invent category names, and do not assume or access stripped input columns like category or priority_flag.
 enforcement:
-  - "[FILL IN: Specific testable rule 1 — e.g. Category must be exactly one of: Pothole, Flooding, ...]"
-  - "[FILL IN: Specific testable rule 2 — e.g. Priority must be Urgent if description contains: injury, child, school, ...]"
-  - "[FILL IN: Specific testable rule 3 — e.g. Every output row must include a reason field citing specific words from the description]"
-  - "[FILL IN: Refusal condition — e.g. If category cannot be determined from description alone, output category: Other and flag: NEEDS_REVIEW]"
+  - category must be one of: Pothole, Flooding, Streetlight, Waste, Noise, Road Damage, Heritage Damage, Heat Hazard, Drain Blockage, Other
+  - use exact category strings only with no variations
+  - priority must be one of: Urgent, Standard, Low
+  - classify as Urgent if any severity keyword is present
+  - severity keywords: injury, child, school, hospital, ambulance, fire, hazard, fell, collapse
+  - reason must be one sentence
+  - reason must cite specific words from the complaint description
+  - flag must be NEEDS_REVIEW or blank
+  - set flag NEEDS_REVIEW when category is genuinely ambiguous
+  - do not output category names outside the allowed list
+  - do not omit the reason field
+  - do not assign Standard when severity keywords require Urgent
+  - do not be confidently wrong on genuinely ambiguous complaints

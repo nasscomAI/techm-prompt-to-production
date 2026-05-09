@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,"Description contains 'tarmac surface melting at', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202402,Other,Standard,"Description contains 'metal bus shelter reaching', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202405,Other,Standard,"Description contains 'dead trees with split', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202406,Other,Standard,"Description contains 'irrigation system broken. grass', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202407,Road Damage,Urgent,"Description includes 'upturned', so category is Road Damage.",
+AM-202410,Pothole,Standard,"Description includes 'pothole', so category is Pothole.",
+AM-202414,Other,Standard,"Description contains 'residential colony unlit after', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202417,Waste,Standard,"Description includes 'waste' and the issue is ambiguous, so category is Waste with NEEDS_REVIEW.",NEEDS_REVIEW
+AM-202421,Noise,Standard,"Description includes 'music', so category is Noise.",
+AM-202424,Road Damage,Standard,"Description includes 'road surface', so category is Road Damage.",
+AM-202429,Other,Standard,"Description contains 'river walk surface temperature', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202431,Heritage Damage,Standard,"Description includes 'heritage', so category is Heritage Damage.",
+AM-202435,Other,Standard,"Description contains 'black metal road dividers', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
+AM-202444,Waste,Standard,"Description includes 'waste', so category is Waste.",
+AM-202445,Other,Standard,"Description contains 'brt shelter roof glass', which does not map clearly to an allowed category, so category is Other.",NEEDS_REVIEW
