@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'pothole' and 'damage'.",NEEDS_REVIEW
+PM-202402,Pothole,Urgent,"The description was assigned to Pothole because it contained specific keywords like 'pothole, child, school'.",
+PM-202406,Flooding,Standard,The description was assigned to Flooding because it contained specific keywords like 'flood'.,
+PM-202408,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'water' and 'flood'.",NEEDS_REVIEW
+PM-202410,Streetlight,Standard,"The description was assigned to Streetlight because it contained specific keywords like 'streetlight, light, dark'.",
+PM-202411,Streetlight,Urgent,"The description was assigned to Streetlight because it contained specific keywords like 'streetlight, light, hazard'.",
+PM-202413,Waste,Standard,The description was assigned to Waste because it contained specific keywords like 'garbage'.,
+PM-202418,Noise,Standard,The description was assigned to Noise because it contained specific keywords like 'music'.,
+PM-202419,Road Damage,Standard,"The description was assigned to Road Damage because it contained specific keywords like 'road, crack'.",
+PM-202420,Other,Urgent,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+PM-202427,Flooding,Standard,The description was assigned to Flooding because it contained specific keywords like 'flood'.,
+PM-202428,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+PM-202430,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'light' and 'dark'.",NEEDS_REVIEW
+PM-202433,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'waste' and 'road'.",NEEDS_REVIEW
+PM-202446,Road Damage,Urgent,"The description was assigned to Road Damage because it contained specific keywords like 'broken, fell'.",

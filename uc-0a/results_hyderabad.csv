@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Urgent,"The description was assigned to Flooding because it contained specific keywords like 'flood, ambulance'.",
+GH-202402,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'flood' and 'drain'.",NEEDS_REVIEW
+GH-202406,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'drain' and 'water'.",NEEDS_REVIEW
+GH-202407,Drain Blockage,Standard,"The description was assigned to Drain Blockage because it contained specific keywords like 'drain, block'.",
+GH-202410,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'road' and 'pothole'.",NEEDS_REVIEW
+GH-202411,Pothole,Urgent,"The description was assigned to Pothole because it contained specific keywords like 'pit, pothole, hospital'.",
+GH-202412,Pothole,Urgent,"The description was assigned to Pothole because it contained specific keywords like 'school, pothole'.",
+GH-202417,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'garbage' and 'waste'.",NEEDS_REVIEW
+GH-202420,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+GH-202422,Road Damage,Urgent,"The description was assigned to Road Damage because it contained specific keywords like 'road, collapse'.",
+GH-202424,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'flood' and 'light'.",NEEDS_REVIEW
+GH-202428,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'sun' and 'waste'.",NEEDS_REVIEW
+GH-202432,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+GH-202448,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'flood' and 'drain'.",NEEDS_REVIEW
+GH-202438,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'road' and 'water'.",NEEDS_REVIEW
