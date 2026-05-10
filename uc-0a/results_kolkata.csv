@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'lamp' and 'heritage'.",NEEDS_REVIEW
+KM-202402,Road Damage,Standard,"The description was assigned to Road Damage because it contained specific keywords like 'road, broken'.",
+KM-202405,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+KM-202409,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'pothole' and 'road'.",NEEDS_REVIEW
+KM-202410,Pothole,Standard,The description was assigned to Pothole because it contained specific keywords like 'pothole'.,
+KM-202411,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'water' and 'pothole'.",NEEDS_REVIEW
+KM-202415,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'drain' and 'road'.",NEEDS_REVIEW
+KM-202418,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'hot' and 'waste'.",NEEDS_REVIEW
+KM-202421,Other,Urgent,"The description was ambiguous, matching multiple categories using words like 'pit' and 'broken'.",NEEDS_REVIEW
+KM-202422,Road Damage,Standard,The description was assigned to Road Damage because it contained specific keywords like 'road'.,
+KM-202426,Heritage Damage,Standard,The description was assigned to Heritage Damage because it contained specific keywords like 'heritage'.,
+KM-202430,Road Damage,Standard,The description was assigned to Road Damage because it contained specific keywords like 'road'.,
+KM-202434,Heritage Damage,Standard,The description was assigned to Heritage Damage because it contained specific keywords like 'heritage'.,
+KM-202436,Streetlight,Standard,The description was assigned to Streetlight because it contained specific keywords like 'dark'.,
+KM-202438,Heritage Damage,Standard,The description was assigned to Heritage Damage because it contained specific keywords like 'heritage'.,

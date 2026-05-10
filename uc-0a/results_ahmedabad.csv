@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+AM-202402,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+AM-202405,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+AM-202406,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'broken' and 'heat'.",NEEDS_REVIEW
+AM-202407,Road Damage,Urgent,"The description was assigned to Road Damage because it contained specific keywords like 'broken, child'.",
+AM-202410,Pothole,Standard,The description was assigned to Pothole because it contained specific keywords like 'pothole'.,
+AM-202414,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+AM-202417,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'waste' and 'heritage'.",NEEDS_REVIEW
+AM-202421,Noise,Standard,The description was assigned to Noise because it contained specific keywords like 'music'.,
+AM-202424,Road Damage,Standard,The description was assigned to Road Damage because it contained specific keywords like 'road'.,
+AM-202429,Other,Standard,The description lacked specific actionable keywords to clearly determine a category.,NEEDS_REVIEW
+AM-202431,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'road' and 'heritage'.",NEEDS_REVIEW
+AM-202435,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'road' and 'heat'.",NEEDS_REVIEW
+AM-202444,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'sun' and 'waste'.",NEEDS_REVIEW
+AM-202445,Other,Standard,"The description was ambiguous, matching multiple categories using words like 'sun' and 'broken'.",NEEDS_REVIEW
