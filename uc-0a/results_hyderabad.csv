@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Flooding,Urgent,"Based on words ""Underpass flooded after 1hr rain.",
+Flooding,Standard,"Based on words ""Market area flooded.",NEEDS_REVIEW
+Drain Blockage,Standard,"Based on words ""Main stormwater drain 100% blocked with"", classified as Drain Blockage.",
+Drain Blockage,Standard,"Based on words ""Drain blocked and mosquito breeding.",
+Pothole,Standard,"Based on words ""Potholes causing vehicles to slow to"", classified as Pothole.",
+Pothole,Urgent,"Based on words ""Pothole swallowed entire motorcycle wheel.",
+Pothole,Urgent,"Based on words ""School bus struggling to navigate 6"", classified as Pothole.",
+Waste,Standard,"Based on words ""Heritage zone garbage overflow.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Construction drilling from 5am daily near"", classified as Other.",NEEDS_REVIEW
+Other,Urgent,"Based on words ""Road collapsed partially.",NEEDS_REVIEW
+Flooding,Standard,"Based on words ""Underpass floods in light rain.",
+Waste,Standard,"Based on words ""Post-market waste not cleared.",
+Other,Standard,"Based on words ""24hr supermarket delivery trucks idling with"", classified as Other.",NEEDS_REVIEW
+Flooding,Standard,"Based on words ""Main drain blocked — entire locality"", classified as Flooding.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Colony surrounded by fields that channel"", classified as Other.",NEEDS_REVIEW

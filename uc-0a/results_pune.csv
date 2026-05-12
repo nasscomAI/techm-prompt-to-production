@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Pothole,Standard,"Based on words ""Large pothole 60cm wide causing tyre"", classified as Pothole.",
+Pothole,Urgent,"Based on words ""Deep pothole near bus stop.",
+Flooding,Standard,"Based on words ""Underpass flooded knee-deep after 2hrs rain.",
+Flooding,Standard,"Based on words ""Bus stand flooded.",NEEDS_REVIEW
+Streetlight,Standard,"Based on words ""Three consecutive streetlights out for 10"", classified as Streetlight.",
+Streetlight,Urgent,"Based on words ""Streetlight flickering and sparking.",
+Waste,Standard,"Based on words ""Overflowing garbage bins near vegetable market.",
+Other,Standard,"Based on words ""Wedding venue playing music past midnight"", classified as Other.",NEEDS_REVIEW
+Road Damage,Standard,"Based on words ""Road surface cracked and sinking near"", classified as Road Damage.",
+Other,Urgent,"Based on words ""Manhole cover missing.",NEEDS_REVIEW
+Flooding,Standard,"Based on words ""Bridge approach floods in 30mins of"", classified as Flooding.",
+Other,Standard,"Based on words ""Dead animal not removed for 36"", classified as Other.",NEEDS_REVIEW
+Streetlight,Standard,"Based on words ""Heritage street, lights out.",NEEDS_REVIEW
+Waste,Standard,"Based on words ""Bulk waste from apartment renovation dumped"", classified as Waste.",
+Other,Urgent,"Based on words ""Footpath tiles broken and upturned.",NEEDS_REVIEW

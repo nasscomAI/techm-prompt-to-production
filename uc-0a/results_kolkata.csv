@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Heritage Damage,Standard,"Based on words ""Heritage lamp post knocked over by"", classified as Heritage Damage.",
+Other,Standard,"Based on words ""Historic tram road cobblestones broken up"", classified as Other.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Wedding band playing near Tagore Museum"", classified as Other.",NEEDS_REVIEW
+Pothole,Standard,"Based on words ""Airport access road full of potholes.",
+Pothole,Standard,"Based on words ""Pothole causing tyre blowouts.",
+Pothole,Standard,"Based on words ""Deep pothole filling with rainwater.",
+Drain Blockage,Standard,"Based on words ""New residential complex draining directly onto"", classified as Drain Blockage.",
+Waste,Standard,"Based on words ""Tourist zone waste overflowing.",
+Other,Urgent,"Based on words ""Footpath broken and sinking.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Road surface buckled near bridge.",NEEDS_REVIEW
+Heritage Damage,Standard,"Based on words ""Heritage residential building exterior defaced by"", classified as Heritage Damage.",
+Other,Standard,"Based on words ""Road subsided near gas pipeline.",NEEDS_REVIEW
+Heritage Damage,Standard,"Based on words ""Street paving removed for utility work"", classified as Heritage Damage.",
+Streetlight,Standard,"Based on words ""Entire colony substation tripped.",
+Heritage Damage,Standard,"Based on words ""Street vendors using amplifiers illegally in"", classified as Heritage Damage.",

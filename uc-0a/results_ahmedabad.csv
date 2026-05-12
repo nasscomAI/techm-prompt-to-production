@@ -1,0 +1,16 @@
+category,priority,reason,flag
+Other,Standard,"Based on words ""Tarmac surface melting at 44°C.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Metal bus shelter reaching dangerous temperatures.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Dead trees with split branches.",NEEDS_REVIEW
+Heat Hazard,Standard,"Based on words ""Irrigation system broken.",
+Other,Urgent,"Based on words ""Broken bench and upturned paving.",NEEDS_REVIEW
+Pothole,Standard,"Based on words ""Pothole on main highway causing morning"", classified as Pothole.",
+Other,Standard,"Based on words ""Residential colony unlit after 9pm.",NEEDS_REVIEW
+Waste,Standard,"Based on words ""Night market waste not cleared before"", classified as Waste.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Club music audible at residential buildings"", classified as Other.",NEEDS_REVIEW
+Other,Standard,"Based on words ""Zoo approach road surface bubbling at"", classified as Other.",NEEDS_REVIEW
+Other,Standard,"Based on words ""River walk surface temperature unbearable.",NEEDS_REVIEW
+Heritage Damage,Standard,"Based on words ""Old city road subsidence near ancient"", classified as Heritage Damage.",
+Heat Hazard,Standard,"Based on words ""Black metal road dividers storing heat.",
+Waste,Standard,"Based on words ""Restaurant waste bins overflowing on Sunday"", classified as Waste.",
+Other,Standard,"Based on words ""BRT shelter roof glass broken.",NEEDS_REVIEW
