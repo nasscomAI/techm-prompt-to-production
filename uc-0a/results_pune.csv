@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Normal,Description contains 'pothole'.,
+PM-202402,Pothole,Urgent,"Description contains 'pothole'. Flagged as Urgent due to: child, school.",
+PM-202406,Flooding,Normal,Description contains 'flood' or 'water'.,
+PM-202408,Flooding,Normal,Description contains 'flood' or 'water'.,
+PM-202410,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202411,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202413,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202418,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202419,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202420,Other,Urgent,Category cannot be determined from description alone. Flagged as Urgent due to: injury.,NEEDS_REVIEW
+PM-202427,Flooding,Normal,Description contains 'flood' or 'water'.,
+PM-202428,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202430,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202433,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+PM-202446,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW

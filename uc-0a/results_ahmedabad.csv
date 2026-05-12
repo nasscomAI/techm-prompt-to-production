@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+AM-202401,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202402,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202405,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202406,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202407,Other,Urgent,Category cannot be determined from description alone. Flagged as Urgent due to: child.,NEEDS_REVIEW
+AM-202410,Pothole,Normal,Description contains 'pothole'.,
+AM-202414,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202417,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202421,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202424,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202429,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202431,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202435,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202444,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+AM-202445,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW

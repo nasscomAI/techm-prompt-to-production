@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+KM-202401,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202402,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202405,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202409,Pothole,Normal,Description contains 'pothole'.,
+KM-202410,Pothole,Normal,Description contains 'pothole'.,
+KM-202411,Pothole,Normal,Description contains 'pothole'.,
+KM-202415,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202418,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202421,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202422,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202426,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202430,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202434,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202436,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+KM-202438,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW

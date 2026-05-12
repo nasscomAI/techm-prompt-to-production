@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+GH-202401,Flooding,Normal,Description contains 'flood' or 'water'.,
+GH-202402,Flooding,Normal,Description contains 'flood' or 'water'.,
+GH-202406,Flooding,Normal,Description contains 'flood' or 'water'.,
+GH-202407,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202410,Pothole,Normal,Description contains 'pothole'.,
+GH-202411,Pothole,Normal,Description contains 'pothole'.,
+GH-202412,Pothole,Urgent,Description contains 'pothole'. Flagged as Urgent due to: school.,
+GH-202417,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202420,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202422,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202424,Flooding,Normal,Description contains 'flood' or 'water'.,
+GH-202428,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202432,Other,Normal,Category cannot be determined from description alone.,NEEDS_REVIEW
+GH-202448,Flooding,Normal,Description contains 'flood' or 'water'.,
+GH-202438,Flooding,Normal,Description contains 'flood' or 'water'.,
