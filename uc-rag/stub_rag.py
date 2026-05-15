@@ -42,6 +42,12 @@ REFUSAL_TEMPLATE = (
 # ── EMBEDDER (loaded once) ───────────────────────────────────────────────────
 _embedder = None
 def get_embedder():
+    """
+    Initialize and return the sentence embedder singleton.
+    
+    Returns:
+        SentenceTransformer: The loaded sentence embedding model.
+    """
     global _embedder
     if _embedder is None:
         print("[stub_rag] Loading embedder (first run only)...")
@@ -52,6 +58,12 @@ def get_embedder():
 _client = None
 _collection = None
 def get_collection():
+    """
+    Initialize and return the ChromaDB collection singleton.
+    
+    Returns:
+        Collection: The retrieved ChromaDB collection, or None if it cannot be accessed.
+    """
     global _client, _collection
     if _collection is None:
         _client = chromadb.PersistentClient(path=DB_PATH)
@@ -63,7 +75,15 @@ def get_collection():
 
 # ── CHUNK DOCUMENTS ──────────────────────────────────────────────────────────
 def _split_sentences(text: str) -> list[str]:
-    """Split on sentence boundaries."""
+    """
+    Split text on sentence boundaries.
+    
+    Args:
+        text (str): The raw text to split.
+        
+    Returns:
+        list[str]: A list of extracted sentences.
+    """
     import re
     sentences = re.split(r'(?<=[.!?])\s+', text.strip())
     return [s.strip() for s in sentences if s.strip()]
@@ -72,6 +92,13 @@ def _chunk_text(text: str, max_tokens: int = MAX_TOKENS) -> list[str]:
     """
     Accumulate sentences until max_tokens is reached.
     Respects sentence boundaries — never splits mid-sentence.
+    
+    Args:
+        text (str): The full text to be chunked.
+        max_tokens (int, optional): The maximum number of words per chunk. Defaults to MAX_TOKENS.
+        
+    Returns:
+        list[str]: A list of text chunks.
     """
     sentences = _split_sentences(text)
     chunks, current, count = [], [], 0
@@ -91,6 +118,12 @@ def chunk_documents(docs_dir: str = DOCS_DIR) -> list[dict]:
     """
     Load all .txt files from docs_dir.
     Return list of {doc_name, chunk_index, text}.
+    
+    Args:
+        docs_dir (str, optional): The directory containing policy documents. Defaults to DOCS_DIR.
+        
+    Returns:
+        list[dict]: A list of dictionary objects representing document chunks.
     """
     results = []
     for fname in sorted(os.listdir(docs_dir)):
@@ -110,7 +143,13 @@ def chunk_documents(docs_dir: str = DOCS_DIR) -> list[dict]:
 
 # ── BUILD INDEX ──────────────────────────────────────────────────────────────
 def build_index(docs_dir: str = DOCS_DIR, db_path: str = DB_PATH):
-    """Embed all chunks and store in ChromaDB."""
+    """
+    Embed all chunks and store in ChromaDB.
+    
+    Args:
+        docs_dir (str, optional): The directory containing policy text files. Defaults to DOCS_DIR.
+        db_path (str, optional): The path to store the ChromaDB index. Defaults to DB_PATH.
+    """
     global _client, _collection
     embedder = get_embedder()
     chunks = chunk_documents(docs_dir)
@@ -143,6 +182,15 @@ def retrieve_and_answer(
     If no chunks pass — return refusal.
     Otherwise call LLM with retrieved context only.
     Returns {answer, cited_chunks}
+    
+    Args:
+        query (str): The user query.
+        llm_call: The callable function to query the LLM. Defaults to None.
+        top_k (int, optional): The number of chunks to retrieve. Defaults to TOP_K.
+        threshold (float, optional): The minimum similarity threshold for chunks. Defaults to THRESHOLD.
+        
+    Returns:
+        dict: A dictionary containing the LLM 'answer', 'cited_chunks', and a 'refused' boolean.
     """
     collection = get_collection()
     if collection is None:
@@ -230,11 +278,24 @@ def query(question: str, llm_call=None) -> dict:
     """
     Public interface for UC-MCP to call.
     Returns {answer, cited_chunks, refused}
+    
+    Args:
+        question (str): The user query.
+        llm_call: The callable LLM function. Defaults to None.
+        
+    Returns:
+        dict: A dictionary containing the answer, cited_chunks, and refused status.
     """
     return retrieve_and_answer(question, llm_call=llm_call)
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 def main():
+    """
+    Main entry point for the stub RAG server CLI.
+    
+    Parses command-line arguments to either build the document index 
+    or run a query against the RAG system.
+    """
     parser = argparse.ArgumentParser(description="UC-RAG Stub — Working Reference Implementation")
     parser.add_argument("--build-index", action="store_true")
     parser.add_argument("--query",       type=str)

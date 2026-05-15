@@ -29,8 +29,14 @@ import os
 # ══════════════════════════════════════════════════════════════════════
 def call_llm(prompt: str) -> str:
     """
-    Call Gemini Flash with the given prompt.
-    Returns the text response as a string.
+    Call the configured LLM (default: Gemini Flash) with the given prompt.
+    
+    Args:
+        prompt (str): The text prompt to send to the LLM.
+        
+    Returns:
+        str: The generated text response from the LLM, or an error message 
+             if the LLM is not configured properly or an exception occurs.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:

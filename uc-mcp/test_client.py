@@ -19,7 +19,18 @@ import sys
 
 
 def jsonrpc_call(port: int, method: str, params: dict = None, req_id: int = 1) -> dict:
-    """Send a JSON-RPC request to the MCP server."""
+    """
+    Send a JSON-RPC request to the MCP server.
+    
+    Args:
+        port (int): The local port number the server is running on.
+        method (str): The JSON-RPC method to invoke.
+        params (dict, optional): The parameters to pass to the method. Defaults to None.
+        req_id (int, optional): The request ID. Defaults to 1.
+        
+    Returns:
+        dict: The JSON-RPC response from the server as a dictionary.
+    """
     payload = {
         "jsonrpc": "2.0",
         "method":  method,
@@ -45,7 +56,15 @@ def jsonrpc_call(port: int, method: str, params: dict = None, req_id: int = 1) -
 
 
 def print_result(label: str, result: dict, expect_error: bool = False):
-    """Print a formatted test result."""
+    """
+    Print a formatted test result.
+    
+    Args:
+        label (str): A descriptive label for the test.
+        result (dict): The JSON-RPC response dictionary to evaluate.
+        expect_error (bool, optional): Whether an error response is expected for this test. 
+                                       Defaults to False.
+    """
     print(f"\n{'='*60}")
     print(f"TEST: {label}")
     print(f"{'='*60}")
@@ -104,7 +123,12 @@ def print_result(label: str, result: dict, expect_error: bool = False):
 
 
 def run_all_tests(port: int):
-    """Run the full reference verification suite from the README."""
+    """
+    Run the full reference verification suite from the README.
+    
+    Args:
+        port (int): The local port number the MCP server is running on.
+    """
     print(f"\nRunning all reference verification tests against port {port}...")
 
     # Test 1 — tools/list
@@ -145,6 +169,12 @@ def run_all_tests(port: int):
 
 
 def main():
+    """
+    Main entry point for the test client script.
+    
+    Parses command-line arguments to execute either a single query or 
+    the full suite of verification tests against the MCP server.
+    """
     parser = argparse.ArgumentParser(description="UC-MCP Test Client")
     parser.add_argument("--port",    type=int, default=8765)
     parser.add_argument("--query",   type=str, help="Send a single query")
