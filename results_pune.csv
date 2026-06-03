@@ -1,0 +1,16 @@
+complaint_id,category,priority,reason,flag
+PM-202401,Pothole,Standard,Cites 'pothole'.,NEEDS_REVIEW
+PM-202402,Pothole,Urgent,Mentions 'school'. cites 'pothole'.,NEEDS_REVIEW
+PM-202406,Flooding,Standard,Cites 'flooded'.,
+PM-202408,Drain Blockage,Standard,Cites 'drain blocked'.,NEEDS_REVIEW
+PM-202410,Streetlight,Standard,Cites 'streetlight'.,
+PM-202411,Streetlight,Urgent,Mentions 'hazard'. cites 'streetlight'.,
+PM-202413,Waste,Standard,Cites 'garbage'.,
+PM-202418,Noise,Standard,Cites 'playing music'.,
+PM-202419,Road Damage,Standard,Cites 'cracked'.,
+PM-202420,Road Damage,Urgent,Mentions 'injury'. cites 'manhole cover missing'.,
+PM-202427,Flooding,Standard,Cites 'rain'.,NEEDS_REVIEW
+PM-202428,Waste,Standard,Cites 'dead animal'.,
+PM-202430,Streetlight,Standard,Cites 'lights out'.,NEEDS_REVIEW
+PM-202433,Waste,Standard,Described as 'bulk waste from apartment renovation dumped...',
+PM-202446,Road Damage,Urgent,Mentions 'fell'. cites 'tiles broken'.,
